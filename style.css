@@ -538,7 +538,7 @@ body {
   display: flex;
   align-items: flex-start;
   background-color: var(--graphite);
-  background-image: url("assets/fundo-atendimento.webp");
+  background-image: url("assets/fundo-atendimento-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1000,6 +1000,7 @@ body {
 
   .care-section {
     min-height: 92vh;
+    background-image: url("assets/fundo-atendimento.webp");
     background-position: center;
   }
 
