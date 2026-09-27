@@ -1782,3 +1782,17 @@ body {
     display: none;
   }
 }
+
+/* Três canais na mesma linha apenas em telas pequenas. */
+@media (max-width: 768px) {
+  .contact-social-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 12px;
+  }
+  .contact-social-links a {
+    min-width: 0;
+    gap: 3px;
+    font-size: clamp(.72rem, 3.5vw, .88rem);
+  }
+  .contact-social-links a span { flex: none; }
+}
