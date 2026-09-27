@@ -6,6 +6,31 @@ const floatingMenuBackdrop = document.getElementById("floatingMenuBackdrop");
 if (floatingMenu && floatingMenuHandle && floatingMenuPanel) {
   const EDGE_GAP = 12;
   const DRAG_THRESHOLD = 6;
+  const hintKey = "vieira-menu-hint-seen";
+  let showMenuHint = true;
+  try {
+    showMenuHint = sessionStorage.getItem(hintKey) !== "1";
+    if (showMenuHint) sessionStorage.setItem(hintKey, "1");
+  } catch (_) {}
+
+  if (showMenuHint) {
+    const hint = document.createElement("span");
+    hint.className = "floating-menu-hint";
+    hint.textContent = "Menu";
+    hint.setAttribute("aria-hidden", "true");
+    floatingMenu.appendChild(hint);
+    requestAnimationFrame(() => hint.classList.add("is-visible"));
+
+    let hintTimer;
+    const dismissHint = () => {
+      hint.classList.remove("is-visible");
+      window.setTimeout(() => hint.remove(), 300);
+      window.clearTimeout(hintTimer);
+    };
+    hintTimer = window.setTimeout(dismissHint, 5200);
+    floatingMenuHandle.addEventListener("pointerdown", dismissHint, { once: true });
+    window.addEventListener("scroll", dismissHint, { once: true, passive: true });
+  }
   let pointerId = null;
   let startPointerX = 0;
   let startPointerY = 0;
