@@ -73,8 +73,20 @@ if (floatingMenu && floatingMenuHandle && floatingMenuPanel) {
 
   function fitOpenMenuToViewport() {
     const rect = floatingMenu.getBoundingClientRect();
-    const panelWidth = Math.min(window.innerWidth <= 480 ? 286 : 310, window.innerWidth - EDGE_GAP * 2);
-    const panelHeight = Math.min(window.innerWidth <= 480 ? 425 : 455, window.innerHeight - EDGE_GAP * 2);
+    // Mede o destino definido pelo CSS sem interferir na animação do painel real.
+    const measurementMenu = floatingMenu.cloneNode(true);
+    measurementMenu.removeAttribute("id");
+    measurementMenu.querySelectorAll("[id]").forEach(element => element.removeAttribute("id"));
+    measurementMenu.classList.add("is-open");
+    measurementMenu.style.visibility = "hidden";
+    measurementMenu.style.pointerEvents = "none";
+    measurementMenu.setAttribute("aria-hidden", "true");
+    measurementMenu.inert = true;
+    const measurementPanel = measurementMenu.querySelector(".floating-menu-panel");
+    measurementPanel.style.transition = "none";
+    document.body.appendChild(measurementMenu);
+    const panelHeight = measurementPanel.getBoundingClientRect().height;
+    measurementMenu.remove();
     const side = floatingMenu.dataset.side || "left";
     // O contêiner continua tendo o tamanho da bolinha (42 px).
     // À direita, o painel usa right: 0 e cresce para a esquerda; por isso
