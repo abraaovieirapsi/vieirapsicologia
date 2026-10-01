@@ -280,3 +280,10 @@
     transition: none;
   }
 }
+
+/* Hero própria para tablet; mobile como alternativa enquanto não houver arquivo. */
+@media (min-width: 700px) and (max-width: 899px), (min-width: 700px) and (max-width: 1199px) and (orientation: portrait) {
+  .cluster-hero::before {
+    background-image: url("../../assets/clusters/tdah-adulto-hero-tablet.webp"), url("../../assets/clusters/tdah-adulto-hero-mobile.webp");
+  }
+}

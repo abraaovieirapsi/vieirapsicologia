@@ -2127,3 +2127,78 @@ body {
 @media (max-width: 699px) and (prefers-reduced-motion: reduce) {
   .hero-brand { animation: none; clip-path: none; }
 }
+
+/* Navegação inicial horizontal da homepage */
+.hero-navigation { display: none; }
+@media (min-width: 700px) {
+  .hero-navigation {
+    position: fixed; z-index: 1200; top: 18px; left: 50%;
+    transform: translateX(-50%); display: block;
+    width: max-content; max-width: calc(100vw - 32px);
+    padding: 17px 26px; border-radius: 999px;
+    background: var(--floating-menu-bg); color: var(--floating-menu-text);
+    box-shadow: 0 16px 46px rgba(30,30,30,.20);
+    transform-origin: left center;
+    transition: opacity .48s ease, transform .55s cubic-bezier(.22,.61,.36,1), clip-path .55s cubic-bezier(.22,.61,.36,1);
+  }
+  .hero-navigation .menu-links { flex-direction: row; align-items: center; gap: clamp(18px,2.5vw,38px); }
+  .hero-navigation .menu-links > li { opacity: 1; transform: none; }
+  .hero-navigation .menu-links a, .hero-navigation .menu-articles-row {
+    color: var(--floating-menu-text); text-decoration: none;
+    font: 500 clamp(1.1rem,1.7vw,1.38rem)/1.08 "Cormorant Garamond",serif;
+    white-space: nowrap;
+  }
+  .hero-navigation .menu-articles-label { font: inherit; }
+  .hero-navigation .menu-articles-row { width: auto; gap: 10px; }
+  .hero-navigation .menu-item-has-submenu { position: relative; width: auto; }
+  .hero-navigation .submenu {
+    display: none; position: absolute; right: -12px; top: calc(100% + 26px);
+    width: 250px; padding: 14px 20px; margin: 0; border-radius: 18px;
+    background: var(--floating-menu-bg); box-shadow: 0 16px 46px rgba(30,30,30,.20);
+    opacity: 1; overflow: visible;
+  }
+  .hero-navigation .menu-item-has-submenu.is-open .submenu { display: block; margin: 0; }
+  .hero-navigation .submenu a { font: 300 .86rem/1.4 "Inter",sans-serif; white-space: normal; }
+  .hero-navigation.is-collapsing {
+    opacity: 0;
+    transform: translateX(-50%) translate(var(--menu-collapse-x, 0px), var(--menu-collapse-y, 0px));
+    clip-path: inset(0 calc(100% - 42px) 0 0 round 21px);
+    pointer-events: none;
+  }
+  .floating-menu.is-receiving-navigation .floating-menu-handle {
+    animation: menu-receive .6s ease both;
+  }
+  .floating-menu.is-intro-navigation { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+/* Tablet em pé e faixa intermediária: foto e identidade próprias */
+@media (min-width: 700px) and (max-width: 899px), (min-width: 700px) and (max-width: 1199px) and (orientation: portrait) {
+  .hero { background-image: url("assets/fundo-tablet.webp"); background-position: center top; min-height: 95svh; overflow: hidden; }
+  .hero::after { display: none; }
+  .hero-brand {
+    position: absolute; display: grid; left: 0; top: 74%; z-index: 2;
+    transform: translateY(-50%); grid-template-columns: 82px minmax(0,1fr);
+    align-items: center; gap: 22px; width: 100%; padding: 22px 40px;
+    color: var(--soft-white); isolation: isolate;
+    animation: hero-brand-mobile-reveal .95s cubic-bezier(.22,.61,.36,1) .12s both;
+  }
+  .hero-brand::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg,rgba(28,28,28,.46),rgba(28,28,28,.32)); }
+  .hero-brand-logo { display: block; width: 100%; height: auto; }
+  .hero-brand-copy { min-width: 0; }
+  .hero-brand-name { font: 500 clamp(3rem,6vw,4.2rem)/.92 "Cormorant Garamond",serif; letter-spacing: -.035em; white-space: nowrap; }
+  .hero-brand-rule { display: block; height: 1px; width: calc(100% + 40px); margin: 13px 0 11px; background: rgba(248,248,245,.76); }
+  .hero-brand-role { font: 400 clamp(.86rem,1.65vw,1.1rem)/1.3 "Inter",sans-serif; }
+  .hero-brand-logo, .hero-brand-name, .hero-brand-rule, .hero-brand-role { animation: none; opacity: 1; transform: none; color: var(--soft-white); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-navigation { transition: none; }
+  .hero-brand { animation: none !important; clip-path: none; }
+}
+
+@keyframes menu-receive {
+  0%, 35% { opacity: 0; transform: scale(.7); }
+  75% { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-menu.is-receiving-navigation .floating-menu-handle { animation: none; }
+}

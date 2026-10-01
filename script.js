@@ -336,3 +336,71 @@ if (window.location.protocol === "file:") {
     }
   });
 }
+
+/* Menu horizontal inicial: recolhe uma única vez ao entrar em Sobre mim. */
+if (document.querySelector(".hero-brand") && floatingMenu) {
+  const wideScreen = window.matchMedia("(min-width: 700px)");
+  let introFinished = false;
+  let introNav;
+  function finishIntroNavigation() {
+    if (!introNav || introFinished) return;
+    introFinished = true;
+    introNav.inert = true;
+    const navRect = introNav.getBoundingClientRect();
+    const bubbleRect = floatingMenu.getBoundingClientRect();
+    introNav.style.setProperty("--menu-collapse-x", `${bubbleRect.left - navRect.left}px`);
+    introNav.style.setProperty("--menu-collapse-y", `${bubbleRect.top + bubbleRect.height / 2 - navRect.top - navRect.height / 2}px`);
+    floatingMenu.classList.add("is-receiving-navigation");
+    window.setTimeout(() => floatingMenu.classList.remove("is-receiving-navigation"), 650);
+    introNav.classList.add("is-collapsing");
+    floatingMenu.classList.remove("is-intro-navigation");
+    window.setTimeout(() => { introNav?.remove(); introNav = null; }, 600);
+  }
+  function updateIntroNavigation() {
+    const about = document.getElementById("sobre");
+    if (!about) return;
+    if (about.getBoundingClientRect().top <= window.innerHeight * .65) {
+      finishIntroNavigation();
+      introFinished = true;
+    }
+    if (!wideScreen.matches) {
+      introNav?.remove(); introNav = null;
+      floatingMenu.classList.remove("is-intro-navigation");
+      return;
+    }
+    if (introFinished || introNav) return;
+    introNav = document.createElement("nav");
+    introNav.className = "hero-navigation";
+    introNav.setAttribute("aria-label", "Navegação principal inicial");
+    const links = floatingMenu.querySelector(".menu-links").cloneNode(true);
+    links.querySelectorAll("[id]").forEach(element => element.removeAttribute("id"));
+    const toggle = links.querySelector(".submenu-toggle");
+    const submenu = links.querySelector(".submenu");
+    submenu.id = "heroArticlesSubmenu";
+    toggle.setAttribute("aria-controls", submenu.id);
+    toggle.setAttribute("aria-expanded", "false");
+    links.querySelector(".menu-item-has-submenu").classList.remove("is-open");
+    toggle.addEventListener("click", () => {
+      const opened = toggle.closest("li").classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(opened));
+    });
+    introNav.appendChild(links);
+    document.body.appendChild(introNav);
+    floatingMenu.classList.add("is-intro-navigation");
+  }
+  document.addEventListener("click", event => {
+    if (introNav && !introNav.contains(event.target)) {
+      introNav.querySelector(".menu-item-has-submenu").classList.remove("is-open");
+      introNav.querySelector(".submenu-toggle").setAttribute("aria-expanded", "false");
+    }
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && introNav) {
+      introNav.querySelector(".menu-item-has-submenu").classList.remove("is-open");
+      introNav.querySelector(".submenu-toggle").setAttribute("aria-expanded", "false");
+    }
+  });
+  window.addEventListener("scroll", updateIntroNavigation, { passive: true });
+  wideScreen.addEventListener("change", updateIntroNavigation);
+  updateIntroNavigation();
+}
