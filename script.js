@@ -1,193 +1,3 @@
-const floatingMenu = document.getElementById("floatingMenu");
-const floatingMenuHandle = document.getElementById("floatingMenuHandle");
-const floatingMenuPanel = document.getElementById("floatingMenuPanel");
-const floatingMenuBackdrop = document.getElementById("floatingMenuBackdrop");
-
-if (floatingMenu && floatingMenuHandle && floatingMenuPanel) {
-  const EDGE_GAP = 12;
-  const DRAG_THRESHOLD = 6;
-  const hintKey = "vieira-menu-hint-seen";
-  let showMenuHint = true;
-  try {
-    showMenuHint = sessionStorage.getItem(hintKey) !== "1";
-    if (showMenuHint) sessionStorage.setItem(hintKey, "1");
-  } catch (_) {}
-
-  if (showMenuHint) {
-    const hint = document.createElement("span");
-    hint.className = "floating-menu-hint";
-    hint.textContent = "Menu";
-    hint.setAttribute("aria-hidden", "true");
-    floatingMenu.appendChild(hint);
-    requestAnimationFrame(() => hint.classList.add("is-visible"));
-
-    let hintTimer;
-    const dismissHint = () => {
-      hint.classList.remove("is-visible");
-      window.setTimeout(() => hint.remove(), 300);
-      window.clearTimeout(hintTimer);
-    };
-    hintTimer = window.setTimeout(dismissHint, 5200);
-    floatingMenuHandle.addEventListener("pointerdown", dismissHint, { once: true });
-    window.addEventListener("scroll", dismissHint, { once: true, passive: true });
-  }
-  let pointerId = null;
-  let startPointerX = 0;
-  let startPointerY = 0;
-  let startLeft = 0;
-  let startTop = 0;
-  let moved = false;
-  let suppressNextClick = false;
-
-  function clamp(value, min, max) {
-    return Math.min(Math.max(value, min), max);
-  }
-
-  function setPosition(left, top) {
-    floatingMenu.style.left = `${left}px`;
-    floatingMenu.style.right = "auto";
-    floatingMenu.style.top = `${top}px`;
-  }
-
-  function viewportBounds() {
-    const rect = floatingMenu.getBoundingClientRect();
-    return {
-      maxLeft: Math.max(EDGE_GAP, window.innerWidth - rect.width - EDGE_GAP),
-      maxTop: Math.max(EDGE_GAP, window.innerHeight - rect.height - EDGE_GAP)
-    };
-  }
-
-  function snapToNearestVerticalEdge() {
-    const rect = floatingMenu.getBoundingClientRect();
-    const bounds = viewportBounds();
-    const centerX = rect.left + rect.width / 2;
-    const side = centerX < window.innerWidth / 2 ? "left" : "right";
-    const left = side === "left" ? EDGE_GAP : bounds.maxLeft;
-    const top = clamp(rect.top, EDGE_GAP, bounds.maxTop);
-
-    floatingMenu.dataset.side = side;
-    floatingMenu.style.transition = "left .28s cubic-bezier(.22,.61,.36,1), top .18s ease";
-    setPosition(left, top);
-    window.setTimeout(() => { floatingMenu.style.transition = ""; }, 300);
-  }
-
-  function fitOpenMenuToViewport() {
-    const rect = floatingMenu.getBoundingClientRect();
-    // Mede o destino definido pelo CSS sem interferir na animação do painel real.
-    const measurementMenu = floatingMenu.cloneNode(true);
-    measurementMenu.removeAttribute("id");
-    measurementMenu.querySelectorAll("[id]").forEach(element => element.removeAttribute("id"));
-    measurementMenu.classList.add("is-open");
-    measurementMenu.style.visibility = "hidden";
-    measurementMenu.style.pointerEvents = "none";
-    measurementMenu.setAttribute("aria-hidden", "true");
-    measurementMenu.inert = true;
-    const measurementPanel = measurementMenu.querySelector(".floating-menu-panel");
-    measurementPanel.style.transition = "none";
-    document.body.appendChild(measurementMenu);
-    const panelHeight = measurementPanel.getBoundingClientRect().height;
-    measurementMenu.remove();
-    const side = floatingMenu.dataset.side || "left";
-    // O contêiner continua tendo o tamanho da bolinha (42 px).
-    // À direita, o painel usa right: 0 e cresce para a esquerda; por isso
-    // a referência correta é a posição da própria bolinha, não a largura do painel.
-    const bubbleWidth = floatingMenu.offsetWidth || 42;
-    const left = side === "left"
-      ? EDGE_GAP
-      : window.innerWidth - bubbleWidth - EDGE_GAP;
-    const top = clamp(rect.top, EDGE_GAP, window.innerHeight - panelHeight - EDGE_GAP);
-    setPosition(left, top);
-  }
-
-  function openMenu() {
-    fitOpenMenuToViewport();
-    floatingMenu.classList.add("is-open");
-    floatingMenuBackdrop?.classList.add("is-open");
-    floatingMenuHandle.setAttribute("aria-expanded", "true");
-    floatingMenuHandle.setAttribute("aria-label", "Fechar menu");
-    floatingMenuPanel.setAttribute("aria-hidden", "false");
-  }
-
-  function closeMenu() {
-    floatingMenu.classList.remove("is-open");
-    floatingMenuBackdrop?.classList.remove("is-open");
-    floatingMenuHandle.setAttribute("aria-expanded", "false");
-    floatingMenuHandle.setAttribute("aria-label", "Abrir menu");
-    floatingMenuPanel.setAttribute("aria-hidden", "true");
-    const rect = floatingMenu.getBoundingClientRect();
-    const side = floatingMenu.dataset.side || "left";
-    const bubbleLeft = side === "left" ? EDGE_GAP : window.innerWidth - 42 - EDGE_GAP;
-    const bubbleTop = clamp(rect.top, EDGE_GAP, window.innerHeight - 42 - EDGE_GAP);
-    setPosition(bubbleLeft, bubbleTop);
-  }
-
-  floatingMenuHandle.addEventListener("pointerdown", event => {
-    if (floatingMenu.classList.contains("is-open")) return;
-    pointerId = event.pointerId;
-    moved = false;
-    startPointerX = event.clientX;
-    startPointerY = event.clientY;
-    const rect = floatingMenu.getBoundingClientRect();
-    startLeft = rect.left;
-    startTop = rect.top;
-    floatingMenuHandle.setPointerCapture(pointerId);
-    floatingMenu.classList.add("is-dragging");
-  });
-
-  floatingMenuHandle.addEventListener("pointermove", event => {
-    if (event.pointerId !== pointerId) return;
-    const dx = event.clientX - startPointerX;
-    const dy = event.clientY - startPointerY;
-    if (!moved && Math.hypot(dx, dy) >= DRAG_THRESHOLD) moved = true;
-    if (!moved) return;
-
-    const bounds = viewportBounds();
-    setPosition(
-      clamp(startLeft + dx, EDGE_GAP, bounds.maxLeft),
-      clamp(startTop + dy, EDGE_GAP, bounds.maxTop)
-    );
-  });
-
-  function finishPointer(event) {
-    if (event.pointerId !== pointerId) return;
-    floatingMenu.classList.remove("is-dragging");
-    try { floatingMenuHandle.releasePointerCapture(pointerId); } catch (_) {}
-    pointerId = null;
-
-    if (moved) {
-      suppressNextClick = true;
-      snapToNearestVerticalEdge();
-      window.setTimeout(() => { suppressNextClick = false; }, 80);
-    }
-  }
-
-  floatingMenuHandle.addEventListener("pointerup", finishPointer);
-  floatingMenuHandle.addEventListener("pointercancel", finishPointer);
-
-  floatingMenuHandle.addEventListener("click", event => {
-    if (suppressNextClick || moved) {
-      event.preventDefault();
-      moved = false;
-      return;
-    }
-    openMenu();
-  });
-
-  floatingMenuBackdrop?.addEventListener("click", closeMenu);
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && floatingMenu.classList.contains("is-open")) closeMenu();
-  });
-
-  document.querySelectorAll(".floating-menu .menu-links a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  window.addEventListener("resize", () => {
-    if (floatingMenu.classList.contains("is-open")) fitOpenMenuToViewport();
-    else snapToNearestVerticalEdge();
-  });
-}
-
 /* ==========================================
    ANIMAÇÃO DA SEÇÃO PSICOTERAPIA
 ========================================== */
@@ -303,22 +113,6 @@ if (contactReveal) {
 
 
 /* ==========================================
-   SUBMENU — ARTIGOS (menu flutuante)
-   ========================================== */
-const articlesMenuItem = document.querySelector(".floating-menu .menu-item-has-submenu");
-const articlesSubmenuToggle = document.querySelector(".floating-menu .submenu-toggle");
-
-if (articlesMenuItem && articlesSubmenuToggle) {
-  articlesSubmenuToggle.addEventListener("click", event => {
-    event.stopPropagation();
-    const isOpen = articlesMenuItem.classList.toggle("is-open");
-    articlesSubmenuToggle.setAttribute("aria-expanded", String(isOpen));
-    articlesSubmenuToggle.setAttribute("aria-label", isOpen ? "Fechar temas de artigos" : "Abrir temas de artigos");
-  });
-}
-
-
-/* ==========================================
    TESTE LOCAL — RESOLVER PASTAS PARA INDEX.HTML
    Em servidor (GitHub Pages/domínio), URLs limpas continuam intactas.
 ========================================== */
@@ -337,70 +131,47 @@ if (window.location.protocol === "file:") {
   });
 }
 
-/* Menu horizontal inicial: recolhe uma única vez ao entrar em Sobre mim. */
-if (document.querySelector(".hero-brand") && floatingMenu) {
-  const wideScreen = window.matchMedia("(min-width: 700px)");
-  let introFinished = false;
-  let introNav;
-  function finishIntroNavigation() {
-    if (!introNav || introFinished) return;
-    introFinished = true;
-    introNav.inert = true;
-    const navRect = introNav.getBoundingClientRect();
-    const bubbleRect = floatingMenu.getBoundingClientRect();
-    introNav.style.setProperty("--menu-collapse-x", `${bubbleRect.left - navRect.left}px`);
-    introNav.style.setProperty("--menu-collapse-y", `${bubbleRect.top + bubbleRect.height / 2 - navRect.top - navRect.height / 2}px`);
-    floatingMenu.classList.add("is-receiving-navigation");
-    window.setTimeout(() => floatingMenu.classList.remove("is-receiving-navigation"), 650);
-    introNav.classList.add("is-collapsing");
-    floatingMenu.classList.remove("is-intro-navigation");
-    window.setTimeout(() => { introNav?.remove(); introNav = null; }, 600);
+
+/* Cabeçalho fixo compartilhado */
+const siteHeader = document.getElementById("editorialHeader");
+if (siteHeader) {
+  const button = document.getElementById("editorialMenuToggle");
+  const nav = document.getElementById("editorialNavigation");
+  const articles = nav.querySelector(".submenu-toggle");
+  const articlesItem = articles.closest("li");
+  const desktop = matchMedia("(min-width: 1024px)");
+  function closeArticles() {
+    articlesItem.classList.remove("is-open");
+    articles.setAttribute("aria-expanded", "false");
   }
-  function updateIntroNavigation() {
-    const about = document.getElementById("sobre");
-    if (!about) return;
-    if (about.getBoundingClientRect().top <= window.innerHeight * .65) {
-      finishIntroNavigation();
-      introFinished = true;
-    }
-    if (!wideScreen.matches) {
-      introNav?.remove(); introNav = null;
-      floatingMenu.classList.remove("is-intro-navigation");
-      return;
-    }
-    if (introFinished || introNav) return;
-    introNav = document.createElement("nav");
-    introNav.className = "hero-navigation";
-    introNav.setAttribute("aria-label", "Navegação principal inicial");
-    const links = floatingMenu.querySelector(".menu-links").cloneNode(true);
-    links.querySelectorAll("[id]").forEach(element => element.removeAttribute("id"));
-    const toggle = links.querySelector(".submenu-toggle");
-    const submenu = links.querySelector(".submenu");
-    submenu.id = "heroArticlesSubmenu";
-    toggle.setAttribute("aria-controls", submenu.id);
-    toggle.setAttribute("aria-expanded", "false");
-    links.querySelector(".menu-item-has-submenu").classList.remove("is-open");
-    toggle.addEventListener("click", () => {
-      const opened = toggle.closest("li").classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(opened));
-    });
-    introNav.appendChild(links);
-    document.body.appendChild(introNav);
-    floatingMenu.classList.add("is-intro-navigation");
+  function closeMenu() {
+    siteHeader.classList.remove("is-menu-open");
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-label", "Abrir menu");
+    closeArticles();
   }
-  document.addEventListener("click", event => {
-    if (introNav && !introNav.contains(event.target)) {
-      introNav.querySelector(".menu-item-has-submenu").classList.remove("is-open");
-      introNav.querySelector(".submenu-toggle").setAttribute("aria-expanded", "false");
-    }
+  button.addEventListener("click", () => {
+    const open = siteHeader.classList.toggle("is-menu-open");
+    button.setAttribute("aria-expanded", String(open));
+    button.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    if (!open) closeArticles();
   });
+  articles.addEventListener("click", () => {
+    const open = articlesItem.classList.toggle("is-open");
+    articles.setAttribute("aria-expanded", String(open));
+  });
+  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+  document.addEventListener("click", event => { if (!siteHeader.contains(event.target)) closeMenu(); });
   document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && introNav) {
-      introNav.querySelector(".menu-item-has-submenu").classList.remove("is-open");
-      introNav.querySelector(".submenu-toggle").setAttribute("aria-expanded", "false");
+    if (event.key === "Escape") {
+      const wasOpen = siteHeader.classList.contains("is-menu-open");
+      closeMenu();
+      if (wasOpen && !desktop.matches) button.focus();
+      else if (siteHeader.contains(document.activeElement)) articles.focus();
     }
   });
-  window.addEventListener("scroll", updateIntroNavigation, { passive: true });
-  wideScreen.addEventListener("change", updateIntroNavigation);
-  updateIntroNavigation();
+  siteHeader.addEventListener("focusout", () => {
+    setTimeout(() => { if (!siteHeader.contains(document.activeElement)) closeMenu(); }, 0);
+  });
+  desktop.addEventListener("change", closeMenu);
 }

@@ -24,25 +24,24 @@
   <link rel="stylesheet" href="article.css">
 </head>
 <body class="article-page">
-  <div class="floating-menu" id="floatingMenu" data-side="left">
-    <button class="floating-menu-handle" id="floatingMenuHandle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="floatingMenuPanel">
-      <img src="../../../assets/logo-menu-offwhite.svg" alt="" draggable="false">
-    </button>
-
-    <nav class="floating-menu-panel" id="floatingMenuPanel" aria-hidden="true" aria-label="Navegação principal">
-      <div class="floating-menu-content">
-        <ul class="menu-links">
+  <header class="editorial-header" id="editorialHeader">
+  <button class="editorial-menu-toggle" id="editorialMenuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="editorialNavigation"><span></span><span></span><span></span></button>
+  <a class="editorial-signature" href="../../../index.html#inicio" aria-label="Abraão Vieira — início">
+    <img src="../../../assets/logo-hero-graphite.svg" alt="" draggable="false">
+    <span class="editorial-signature-copy"><span class="editorial-name">Abraão Vieira</span><span class="editorial-role">Psicólogo Clínico</span></span>
+  </a>
+  <nav class="editorial-navigation" id="editorialNavigation" aria-label="Navegação principal"><ul class="menu-links">
           <li><a href="../../../index.html#inicio">Início</a></li>
           <li><a href="../../../index.html#sobre">Sobre mim</a></li>
           <li><a href="../../../index.html#psicoterapia">Psicoterapia</a></li>
           <li><a href="../../../index.html#atendimento">Atendimento</a></li>
           <li><a href="../../../index.html#contato">Agendamentos</a></li>
           <li class="menu-item-has-submenu">
-            <button class="menu-articles-row submenu-toggle" type="button" aria-expanded="false" aria-controls="articlesSubmenu" aria-label="Abrir temas de artigos">
+            <button class="menu-articles-row submenu-toggle" type="button" aria-expanded="false" aria-controls="headerArticlesSubmenu" aria-label="Abrir temas de artigos">
               <span class="menu-articles-label">Artigos</span>
               <span class="submenu-chevron" aria-hidden="true"></span>
             </button>
-            <ul class="submenu" id="articlesSubmenu">
+            <ul class="submenu" id="headerArticlesSubmenu">
               <li><a href="../../pensamentos-e-emocoes/">Pensamentos e emoções</a></li>
               <li><a href="../../psicoterapia/">Psicoterapia</a></li>
               <li><a href="../../tcc-e-cognicao/">TCC e cognição</a></li>
@@ -50,17 +49,8 @@
               <li><a href="../../sentido-e-logoterapia/" aria-current="page">Sentido e Logoterapia</a></li>
             </ul>
           </li>
-        </ul>
-        <div class="menu-footer" aria-label="Identificação profissional">
-          <p class="menu-footer-name">Abraão Vieira</p>
-          <span class="menu-footer-line" aria-hidden="true"></span>
-          <p class="menu-footer-role">Psicólogo · Terapia Cognitivo-Comportamental</p>
-          <p class="menu-footer-crp">CRP 11/24139</p>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <div class="floating-menu-backdrop" id="floatingMenuBackdrop" aria-hidden="true"></div>
+        </ul></nav>
+</header>
 
 
   <main>
@@ -145,7 +135,7 @@
       <div class="contact-inner contact-reveal">
         <div class="contact-layout">
           <div class="contact-main">
-            <h2 class="contact-title" id="contato-titulo">Toda mudança pode começar com um pequeno passo.</h2>
+            <h2 class="contact-title" id="contato-titulo">Toda mudança começa com um pequeno passo.</h2>
             <p class="contact-text">Se você sente que este pode ser um bom momento para iniciar um acompanhamento, podemos conversar sobre disponibilidade e formato de atendimento.</p>
             <a class="contact-button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o.%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20sobre%20disponibilidade%20para%20atendimento." target="_blank" rel="noopener noreferrer" aria-label="Agendar sessão pelo WhatsApp">Agendar sessão</a>
             <aside class="contact-social" aria-label="Perfis profissionais">
