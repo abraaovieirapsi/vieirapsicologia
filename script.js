@@ -137,37 +137,47 @@ const siteHeader = document.getElementById("editorialHeader");
 if (siteHeader) {
   const button = document.getElementById("editorialMenuToggle");
   const nav = document.getElementById("editorialNavigation");
-  const articles = nav.querySelector(".submenu-toggle");
-  const articlesItem = articles.closest("li");
+  const submenuItems = Array.from(nav.querySelectorAll(".menu-item-has-submenu"));
   const desktop = matchMedia("(min-width: 1024px)");
-  function closeArticles() {
-    articlesItem.classList.remove("is-open");
-    articles.setAttribute("aria-expanded", "false");
+  function toggleOf(item) {
+    return item.querySelector(".submenu-toggle");
+  }
+  function closeSubmenus(except) {
+    submenuItems.forEach(item => {
+      if (item === except) return;
+      item.classList.remove("is-open");
+      toggleOf(item).setAttribute("aria-expanded", "false");
+    });
   }
   function closeMenu() {
     siteHeader.classList.remove("is-menu-open");
     button.setAttribute("aria-expanded", "false");
     button.setAttribute("aria-label", "Abrir menu");
-    closeArticles();
+    closeSubmenus();
   }
   button.addEventListener("click", () => {
     const open = siteHeader.classList.toggle("is-menu-open");
     button.setAttribute("aria-expanded", String(open));
     button.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
-    if (!open) closeArticles();
+    if (!open) closeSubmenus();
   });
-  articles.addEventListener("click", () => {
-    const open = articlesItem.classList.toggle("is-open");
-    articles.setAttribute("aria-expanded", String(open));
+  submenuItems.forEach(item => {
+    const toggle = toggleOf(item);
+    toggle.addEventListener("click", () => {
+      const open = item.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(open));
+      if (open) closeSubmenus(item); // só um submenu aberto por vez
+    });
   });
   nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
   document.addEventListener("click", event => { if (!siteHeader.contains(event.target)) closeMenu(); });
   document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
       const wasOpen = siteHeader.classList.contains("is-menu-open");
+      const focusedItem = submenuItems.find(item => item.contains(document.activeElement));
       closeMenu();
       if (wasOpen && !desktop.matches) button.focus();
-      else if (siteHeader.contains(document.activeElement)) articles.focus();
+      else if (focusedItem) toggleOf(focusedItem).focus();
     }
   });
   siteHeader.addEventListener("focusout", () => {
