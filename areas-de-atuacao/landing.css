@@ -143,3 +143,23 @@ details[data-expanded="true"] summary:after{content:'−'}
 .hero{background-position:50% 50%}
 .portrait img{object-position:50% 40%}
 }
+
+/* LEGIBILIDADE DA HERO — camada entre a foto e o texto.
+   Padrão (escura): degradê #383b3a forte do lado do texto, transparente do lado da foto.
+     Intensidade em --shade, definida no <style> de cada landing.
+   Variante clara (.hero--light): véu #f8f8f5 + letra escura, para fotos claras.
+     Intensidade em --veil, definida no <style> de cada landing.
+   Geometria em px, ancorada ao fim do texto (desktop ~570px da margem do conteúdo, tablet ~590px, celular ~295px).
+   A saída do degradê usa curva suave (várias paradas) para não criar uma borda visível.
+   Para ajustar uma landing, mexer só no valor dela, não aqui. */
+.hero{--shade-rgb:56,59,58;--veil-rgb:248,248,245;--solid:calc(max(48px,(100% - 1120px)/2) + 610px);--fade:calc(max(48px,(100% - 1120px)/2) + 1000px);--span:calc(var(--fade) - var(--solid))}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(var(--shade-rgb),var(--shade,.5)) 0,rgba(var(--shade-rgb),var(--shade,.5)) var(--solid),rgba(var(--shade-rgb),calc(var(--shade,.5)*0.86)) calc(var(--solid) + var(--span)*.2),rgba(var(--shade-rgb),calc(var(--shade,.5)*0.6)) calc(var(--solid) + var(--span)*.4),rgba(var(--shade-rgb),calc(var(--shade,.5)*0.3)) calc(var(--solid) + var(--span)*.6),rgba(var(--shade-rgb),calc(var(--shade,.5)*0.1)) calc(var(--solid) + var(--span)*.8),rgba(var(--shade-rgb),0) var(--fade))}
+.hero .wrap{position:relative;z-index:1}
+.hero--light::before{background:linear-gradient(90deg,rgba(var(--veil-rgb),var(--veil,.7)) 0,rgba(var(--veil-rgb),var(--veil,.7)) var(--solid),rgba(var(--veil-rgb),calc(var(--veil,.7)*0.86)) calc(var(--solid) + var(--span)*.2),rgba(var(--veil-rgb),calc(var(--veil,.7)*0.6)) calc(var(--solid) + var(--span)*.4),rgba(var(--veil-rgb),calc(var(--veil,.7)*0.3)) calc(var(--solid) + var(--span)*.6),rgba(var(--veil-rgb),calc(var(--veil,.7)*0.1)) calc(var(--solid) + var(--span)*.8),rgba(var(--veil-rgb),0) var(--fade))}
+.hero--light,.hero--light .label,.hero--light .lead,.hero--light .hero-service,.hero--light .hero-meta{color:var(--dark)}
+.hero--light .button{background:var(--dark);color:var(--paper);border-color:var(--dark)}
+.hero--light .button:hover{background:var(--ink);border-color:var(--ink)}
+.hero .button:focus-visible{outline-color:var(--paper)}
+.hero--light .button:focus-visible{outline-color:var(--dark)}
+@media(max-width:1024px){.hero{--solid:630px;--fade:calc(100% + 60px)}}
+@media(max-width:650px){.hero{--solid:310px;--fade:calc(100% + 40px)}}

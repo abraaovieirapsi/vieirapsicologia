@@ -23,6 +23,8 @@
 .hero{background-image:url("../../assets/areas-de-atuacao/psicoterapia-para-depressao-hero-desktop.webp")}
 @media(min-width:651px) and (max-width:1024px){.hero{background-image:url("../../assets/areas-de-atuacao/psicoterapia-para-depressao-hero-tablet.webp")}}
 @media(max-width:650px){.hero{background-image:url("../../assets/areas-de-atuacao/psicoterapia-para-depressao-hero-mobile.webp")}}
+/* Camada de legibilidade (véu claro): ajustar só este valor. */
+.hero{--veil:.65}
 </style>
 </head>
 <body>
@@ -37,7 +39,7 @@
 </div>
 </header>
 <main id="conteudo">
-<section class="hero" aria-labelledby="titulo">
+<section class="hero hero--light" aria-labelledby="titulo">
 <div class="wrap">
 <div class="hero-copy">
 <div class="hero-text">

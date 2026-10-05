@@ -23,6 +23,12 @@
 .hero{background-image:url("../../assets/areas-de-atuacao/psicoterapia-para-tdah-adulto-hero-desktop.webp")}
 @media(min-width:651px) and (max-width:1024px){.hero{background-image:url("../../assets/areas-de-atuacao/psicoterapia-para-tdah-adulto-hero-tablet.webp")}}
 @media(max-width:650px){.hero{background-image:url("../../assets/areas-de-atuacao/psicoterapia-para-tdah-adulto-hero-mobile.webp")}}
+/* Camada de legibilidade (degradê escuro): ajustar só este valor. */
+.hero{--shade:.40}
+/* Faixa 651–739 px: a foto tem uma área clara (dedos) sob a primeira linha; reforço só aqui. */
+@media(min-width:651px) and (max-width:739px){.hero{--shade:.66}}
+/* Celulares muito estreitos (até 339 px): mesma razão, o texto ocupa mais da foto. */
+@media(max-width:339px){.hero{--shade:.50}}
 </style>
 </head>
 <body>
