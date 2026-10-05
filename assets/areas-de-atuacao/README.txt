@@ -9,17 +9,30 @@ Estrutura:
 IMAGENS (WebP, sem texto gravado; manter os nomes para substituir)
 Hero, uma por landing, nomeada <slug>-hero-<dispositivo>.webp:
 - desktop (acima de 1024 px): 1920 × 900 px
-- tablet (651 a 1024 px):     1200 × 1000 px
-- mobile (até 650 px):        900 × 1200 px
-  Deixar à esquerda uma área tranquila e escura, porque o texto da hero é claro.
-Retrato compartilhado:
+- tablet (651 a 1024 px):     1600 × 1200 px (em uso)
+- mobile (até 650 px):        1080 × 1350 px (em uso)
+  Qualquer proporção funciona, pois a imagem cobre a caixa e é recortada. O texto fica à esquerda;
+  o assunto da foto deve ficar no terço direito e na faixa central da altura.
+Retrato compartilhado (ainda placeholder):
 - sobre-desktop.webp: 1000 × 1250 px
 - sobre-tablet.webp:   800 × 1200 px
 - sobre-mobile.webp:  1200 × 900 px
 Metas de peso: hero 100–350 KB; retratos 70–200 KB.
-Os arquivos atuais são placeholders sólidos.
 O enquadramento (background-position da hero, object-position do retrato) fica no fim de landing.css.
 Para ajustar só uma landing, acrescentar a regra no <style> do head da própria página.
+
+LEGIBILIDADE DA HERO (camada entre a foto e o texto)
+Cada hero tem uma camada em degradê, forte do lado do texto e transparente do lado da foto.
+Há duas variantes, escolhidas por landing:
+- Escura (padrão): degradê #383b3a, letra clara. Intensidade em --shade.
+- Clara (classe hero--light no <section class="hero">): véu #f8f8f5, letra e botão escuros. Para fotos claras. Intensidade em --veil.
+O valor fica no <style> do head de cada landing, no bloco "Camada de legibilidade". Ajustar só ali.
+Valores atuais: individual --veil .66 · depressão --veil .65 · ansiedade --shade .70 · TDAH --shade .40
+  (o TDAH tem reforço em 651–739 px e até 339 px, pois a foto tem uma área clara sob a primeira linha).
+Ao TROCAR a foto de uma hero, revisar o valor: foto mais clara pede mais intensidade, foto mais escura pede menos.
+Meta: contraste mínimo de 4,5:1 no texto pequeno e 3:1 nos títulos (WCAG AA). Testado em larguras de 320 a 1920 px.
+Se uma foto for muito clara, usar a variante clara; se for escura, a escura. Para trocar, adicionar/remover
+a classe hero--light e trocar --shade por --veil (ou o contrário).
 
 LANDINGS PREVISTAS
 - psicoterapia-individual        (pronta)
