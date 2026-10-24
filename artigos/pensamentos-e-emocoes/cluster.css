@@ -6,6 +6,7 @@
 
 .cluster-page {
   --cluster-taupe: #f1eee9;
+  --hero-tone: #665c53; /* cor própria deste tema; os artigos do tema usam a mesma */
   --hero-shift: 0px;
   background: var(--soft-white);
 }
@@ -27,7 +28,8 @@
   justify-content: center;
   overflow: hidden;
   isolation: isolate;
-  background: var(--soft-white);
+  background-color: var(--hero-tone);
+  background-image: linear-gradient(180deg, var(--hero-tone) 0%, color-mix(in srgb, var(--hero-tone) 88%, #000) 100%);
   padding: 96px 24px 54px;
 }
 
@@ -40,24 +42,14 @@
   background-size: cover;
   background-position: center calc(50% + var(--hero-shift));
   background-repeat: no-repeat;
-  filter: grayscale(.18) saturate(.82) contrast(.96);
+  filter: grayscale(.18) saturate(.82) contrast(.96) brightness(.62); /* escurece só a foto; sem arquivo, aparece a cor do tema */
   transform: scale(1.035);
-  opacity: .88;
+  opacity: .92;
   will-change: background-position;
 }
 
 .cluster-hero::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(34,34,34,.16) 0%,
-      rgba(34,34,34,.20) 48%,
-      rgba(34,34,34,.24) 100%
-    );
+  display: none; /* o escurecimento agora é aplicado à própria foto (::before) */
 }
 
 .cluster-hero-inner,
@@ -84,7 +76,7 @@
   letter-spacing: -.04em;
   text-wrap: balance;
   color: var(--soft-white);
-  text-shadow: 0 1px 12px rgba(0,0,0,.16);
+  text-shadow: none;
 }
 
 .cluster-intro {
@@ -94,8 +86,8 @@
   line-height: 1.66;
   font-weight: 300;
   text-wrap: balance;
-  color: rgba(248,248,245,.90);
-  text-shadow: 0 1px 10px rgba(0,0,0,.14);
+  color: rgba(248,248,245,.94);
+  text-shadow: none;
 }
 
 /* ==========================================

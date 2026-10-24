@@ -1,0 +1,12 @@
+/* Hero dos artigos do tema "sentido-e-logoterapia": cor e imagens (a foto é opcional; sem o arquivo aparece só a cor). Carregar depois de ../article.css. */
+.article-page {
+  --hero-tone: #5f5748;
+}
+.article-hero::before {
+  background-image: url("../../assets/clusters/sentido-e-logoterapia-hero-mobile.webp");
+}
+@media (min-width: 900px) {
+  .article-hero::before {
+    background-image: url("../../assets/clusters/sentido-e-logoterapia-hero-desktop.webp");
+  }
+}

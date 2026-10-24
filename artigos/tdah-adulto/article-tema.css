@@ -1,0 +1,12 @@
+/* Hero dos artigos do tema "tdah-adulto": cor e imagens (a foto é opcional; sem o arquivo aparece só a cor). Carregar depois de ../article.css. */
+.article-page {
+  --hero-tone: #6b5849;
+}
+.article-hero::before {
+  background-image: url("../../assets/clusters/tdah-adulto-hero-mobile.webp");
+}
+@media (min-width: 900px) {
+  .article-hero::before {
+    background-image: url("../../assets/clusters/tdah-adulto-hero-desktop.webp");
+  }
+}
