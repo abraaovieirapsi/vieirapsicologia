@@ -185,3 +185,9 @@ if (siteHeader) {
   });
   desktop.addEventListener("change", closeMenu);
 }
+
+
+/* ==========================================
+   ANO DO RODAPÉ (direitos reservados) — atualizado automaticamente
+========================================== */
+document.querySelectorAll('[data-ano]').forEach(el => { el.textContent = new Date().getFullYear(); });

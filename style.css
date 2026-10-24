@@ -2325,3 +2325,17 @@ body:has(.editorial-header) .hero { margin-top: 0; }
     padding-bottom: 48px;
   }
 }
+
+
+/* ==========================================
+   RODAPÉ (direitos reservados + política de privacidade)
+========================================== */
+.site-footer{background:var(--soft-white);color:var(--graphite);border-top:1px solid rgba(84,84,84,.16);padding:26px 24px 30px;text-align:center;font:400 .75rem/1.7 "Inter",sans-serif}
+.site-footer p{margin:0}
+.site-footer a{display:inline-block;margin-top:6px;color:inherit;text-underline-offset:4px}
+.site-footer a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+
+.contact-map-address{margin:-4px 0 14px;font-size:.86rem;line-height:1.6;color:var(--graphite)}
+.therapy-note .therapy-areas{margin-top:16px}
+.therapy-note a{color:inherit;text-underline-offset:4px}
+.therapy-note a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
