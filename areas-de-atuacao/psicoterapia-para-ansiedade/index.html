@@ -18,14 +18,142 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="../../assets/favicon.png">
 <link rel="stylesheet" href="../landing.css">
+<link rel="preload" as="image" href="../../assets/areas-de-atuacao/hero-retrato-desktop.webp" media="(min-width:651px)" fetchpriority="high">
+<link rel="preload" as="image" href="../../assets/areas-de-atuacao/hero-retrato-mobile.webp" media="(max-width:650px)" fetchpriority="high">
 <style>
-/* HERO DESTA LANDING — trocar os arquivos em /assets/areas-de-atuacao/ mantendo os nomes. */
-.hero{background-image:url("../../assets/areas-de-atuacao/psicoterapia-para-ansiedade-hero-desktop.webp")}
-@media(min-width:651px) and (max-width:1024px){.hero{background-image:url("../../assets/areas-de-atuacao/psicoterapia-para-ansiedade-hero-tablet.webp")}}
-@media(max-width:650px){.hero{background-image:url("../../assets/areas-de-atuacao/psicoterapia-para-ansiedade-hero-mobile.webp")}}
-/* Camada de legibilidade (degradê escuro): ajustar só este valor. */
-.hero{--shade:.70}
+/* HERO DESTA LANDING — fotos compartilhadas em /assets/areas-de-atuacao/. Para usar outra foto só nesta landing, troque os nomes abaixo.
+   Sem o arquivo, a hero mostra o fundo taupe liso. */
+.hero{background-image:url("../../assets/areas-de-atuacao/hero-retrato-desktop.webp")}
+@media(max-width:650px){.hero{background-image:url("../../assets/areas-de-atuacao/hero-retrato-mobile.webp")}}
 </style>
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<meta property="og:image" content="https://vieirapsicologia.com.br/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Abraão Vieira, psicólogo clínico em Fortaleza">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://vieirapsicologia.com.br/#consultorio",
+      "name": "Abraão Vieira — Psicólogo",
+      "url": "https://vieirapsicologia.com.br/",
+      "telephone": "+55 85 98657-7333",
+      "email": "contato@vieirapsicologia.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida Dom Luís, 300, sala 810, 8º andar, Shopping Avenida",
+        "addressLocality": "Fortaleza",
+        "addressRegion": "CE",
+        "addressCountry": "BR"
+      },
+      "image": "https://vieirapsicologia.com.br/assets/og-image.jpg",
+      "description": "Psicoterapia com Abraão Vieira, psicólogo clínico (CRP 11/24139), presencial em Fortaleza e online.",
+      "priceRange": "R$100–R$145",
+      "areaServed": {
+        "@type": "City",
+        "name": "Fortaleza"
+      },
+      "hasMap": "https://share.google/D9eclAiotf7Wp4RAR",
+      "sameAs": [
+        "https://www.instagram.com/vieira.psicologia/",
+        "https://medium.com/@abraaovieira",
+        "https://share.google/D9eclAiotf7Wp4RAR"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://vieirapsicologia.com.br/#abraao",
+      "name": "Abraão Vieira",
+      "jobTitle": "Psicólogo clínico",
+      "url": "https://vieirapsicologia.com.br/",
+      "description": "Psicólogo em Fortaleza com atuação em Terapia Cognitivo-Comportamental (TCC) e Logoterapia.",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Federal do Ceará"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "license",
+        "name": "CRP 11/24139",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Conselho Regional de Psicologia do Ceará (CRP-11)"
+        }
+      },
+      "knowsAbout": [
+        "Terapia Cognitivo-Comportamental",
+        "Logoterapia",
+        "Psicoterapia"
+      ],
+      "worksFor": {
+        "@id": "https://vieirapsicologia.com.br/#consultorio"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-para-ansiedade/#pagina",
+      "url": "https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-para-ansiedade/",
+      "name": "Psicoterapia para ansiedade em Fortaleza e online — Abraão Vieira",
+      "description": "Psicoterapia para ansiedade com Abraão Vieira, CRP 11/24139. Atendimento presencial na Aldeota, em Fortaleza, e online.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://vieirapsicologia.com.br/#site"
+      },
+      "about": {
+        "@id": "https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-para-ansiedade/#servico"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-para-ansiedade/#servico",
+      "name": "Psicoterapia para ansiedade",
+      "serviceType": "Psicoterapia",
+      "provider": {
+        "@id": "https://vieirapsicologia.com.br/#consultorio"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Fortaleza"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Sessão online",
+          "price": "100",
+          "priceCurrency": "BRL"
+        },
+        {
+          "@type": "Offer",
+          "name": "Sessão presencial",
+          "price": "145",
+          "priceCurrency": "BRL"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://vieirapsicologia.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Psicoterapia para ansiedade",
+          "item": "https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-para-ansiedade/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
@@ -41,24 +169,10 @@
 <main id="conteudo">
 <section class="hero" aria-labelledby="titulo">
 <div class="wrap">
-<div class="hero-copy">
 <div class="hero-text">
-<p class="hero-service">
-<span class="hero-wide-copy">Psicoterapia · Atendimento online e presencial em Fortaleza</span>
-<span class="hero-mobile-copy">Psicoterapia em Fortaleza e online</span>
-</p>
-<h1 id="titulo">
-<span class="hero-wide-copy">Sua mente parece não parar?</span>
-<span class="hero-mobile-copy">
-Sua mente parece não parar?
-</span>
-</h1>
-<p class="lead">
-<span class="hero-wide-copy">Às vezes, as preocupações ocupam mais espaço do que você gostaria no seu dia.</span>
-<span class="hero-mobile-copy">Às vezes, as preocupações ocupam mais espaço do que você gostaria no seu dia.</span>
-</p>
-</div>
-<a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o.%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." target="_blank" rel="noopener noreferrer">Vamos conversar</a>
+<h1 id="titulo">Psicoterapia para ansiedade</h1>
+<p class="hero-place">Fortaleza · Presencial e online</p>
+<a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o.%20Vi%20a%20p%C3%A1gina%20de%20psicoterapia%20para%20ansiedade%20e%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Agendar uma conversa</a>
 </div>
 </div>
 </section>
@@ -130,7 +244,7 @@ Sua mente parece não parar?
 <dl class="facts">
 <div class="fact">
 <dt>Presencial</dt>
-<dd>Atendimento no bairro Aldeota, em Fortaleza.</dd>
+<dd>Avenida Dom Luís, 300, sala 810, 8º andar, Shopping Avenida, Aldeota, Fortaleza.</dd>
 </div>
 <div class="fact">
 <dt>Online</dt>
@@ -150,7 +264,7 @@ Sua mente parece não parar?
 </div>
 </dl>
 <div class="care-faq-action">
-<a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o.%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." target="_blank" rel="noopener noreferrer">Conversar sobre atendimento</a>
+<a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o.%20Vi%20a%20p%C3%A1gina%20de%20psicoterapia%20para%20ansiedade%20e%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Conversar sobre atendimento</a>
 </div>
 <div class="faq-continuation" role="group" aria-label="Perguntas frequentes">
 <div class="questions">
@@ -193,7 +307,8 @@ Sua mente parece não parar?
 <h2>Quer conversar sobre o atendimento?</h2>
 <div>
 <p>Pelo WhatsApp, você pode esclarecer dúvidas e consultar os horários disponíveis. Se decidir começar, combinamos o agendamento da primeira sessão.</p>
-<a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o.%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." target="_blank" rel="noopener noreferrer">Conversar sobre atendimento</a>
+<a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o.%20Vi%20a%20p%C3%A1gina%20de%20psicoterapia%20para%20ansiedade%20e%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Conversar sobre atendimento</a>
+<p class="closing-note">Ao clicar, você abre o WhatsApp. Evite enviar informações clínicas detalhadas por mensagem. <a href="../../privacidade/">Política de Privacidade</a></p>
 </div>
 </div>
 </section>
@@ -207,11 +322,13 @@ Sua mente parece não parar?
 </div>
 <div class="footer-links">
 <a href="https://vieirapsicologia.com.br/">Site completo</a>
-<!-- PRIVACIDADE: após criar a política, inserir aqui um link para seu endereço real. -->
+<a href="../../privacidade/">Política de Privacidade</a>
 </div>
 </div>
+<p class="footer-legal">© <span data-ano>2026</span> Abraão Vieira. Todos os direitos reservados.</p>
 </div>
 </footer>
+<a class="wa-fab" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o.%20Vi%20a%20p%C3%A1gina%20de%20psicoterapia%20para%20ansiedade%20e%20gostaria%20de%20agendar%20uma%20conversa." target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg></a>
 <script src="../landing.js" defer>
 </script>
 </body>

@@ -21,6 +21,20 @@
     }),{threshold:.08});
     groups.forEach(el=>observer.observe(el));
   }
+
+  // Ano do rodapé (direitos reservados) atualizado automaticamente.
+  document.querySelectorAll('[data-ano]').forEach(el=>{el.textContent=new Date().getFullYear()});
+  // Bolinha do WhatsApp (celular): aparece depois da hero e some perto do fechamento/rodapé.
+  const fab=document.querySelector('.wa-fab');
+  if(fab&&'IntersectionObserver'in window){
+    let past=false,near=false;
+    const sync=()=>fab.classList.toggle('is-on',past&&!near);
+    const heroEl=document.querySelector('.hero');
+    if(heroEl)new IntersectionObserver(([e])=>{past=!e.isIntersecting&&e.boundingClientRect.bottom<0;sync()}).observe(heroEl);
+    const ends=new Set();
+    const endObs=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?ends.add(e.target):ends.delete(e.target));near=ends.size>0;sync()},{rootMargin:'0px 0px 140px 0px'});
+    document.querySelectorAll('.closing,.footer').forEach(el=>endObs.observe(el));
+  }
   document.querySelectorAll('details').forEach(details=>{
     const summary=details.querySelector('summary');
     if(!details.animate)return; // Retain native details behavior.

@@ -1,0 +1,28 @@
+/* Política de Privacidade — mesma identidade do site (Cormorant Garamond + Inter; paper #f8f8f5, ink #545454, taupe #eae5dd). */
+:root{--paper:#f8f8f5;--ink:#545454;--dark:#383b3a;--taupe:#eae5dd;--line:rgba(84,84,84,.2);--serif:'Cormorant Garamond',Georgia,serif;--sans:Inter,Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.75 var(--sans)}
+a{color:inherit;text-underline-offset:4px}
+a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.skip{position:absolute;left:16px;top:-100px;z-index:10;background:var(--paper);padding:10px}
+.skip:focus{top:16px}
+.wrap{width:min(760px,calc(100% - 44px));margin:auto}
+.masthead{height:84px;display:flex;align-items:center}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+.brand img{width:37px;height:42px;object-fit:contain}
+.brand-name{display:block;font:500 25px/1 var(--serif);letter-spacing:-.02em}
+.brand-role{display:block;font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.policy{padding:36px 0 72px}
+h1,h2{font-family:var(--serif);font-weight:500;color:var(--dark);margin:0}
+h1{font-size:clamp(44px,8vw,64px);line-height:1.04;letter-spacing:-.025em}
+.updated{font-size:13px;margin:16px 0 0}
+h2{font-size:clamp(28px,4.6vw,34px);line-height:1.15;letter-spacing:-.02em;margin-top:48px;margin-bottom:14px;scroll-margin-top:24px}
+.policy p{margin:0 0 14px;font-size:16px}
+.policy .updated{margin:18px 0 0;font-size:13px}
+.back{margin-top:44px!important;font-size:14px!important}
+.footer{background:var(--taupe);padding:30px 0}
+.footer-name{font:500 22px/1.2 var(--serif)}
+.footer-meta{font-size:11px;line-height:1.8;margin-top:5px}
+.footer-legal{font-size:11px;margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
