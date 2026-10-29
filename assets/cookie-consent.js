@@ -123,7 +123,7 @@
 
     var wrapper = document.createElement('div');
     wrapper.innerHTML = '<section class="cookie-consent-banner" role="dialog" aria-modal="false" aria-labelledby="cookie-consent-title" hidden>' +
-      '<div class="cookie-consent-main"><p class="cookie-consent-copy"><strong id="cookie-consent-title">Privacidade e cookies.</strong> Usamos cookies e tecnologias semelhantes para o funcionamento do site e, se você permitir, para medir cliques em links de contato pelo Google Ads. Você pode alterar sua escolha a qualquer momento em Configurações.</p>' +
+      '<div class="cookie-consent-main"><p class="cookie-consent-copy"><strong id="cookie-consent-title">Privacidade e cookies.</strong> Usamos cookies e tecnologias semelhantes para o funcionamento do site. Você pode alterar sua escolha a qualquer momento em Configurações.</p>' +
       '<div class="cookie-consent-actions"><button type="button" class="cookie-consent-button" data-cookie-accept>Aceitar</button><button type="button" class="cookie-consent-button" data-cookie-reject>Rejeitar</button><button type="button" class="cookie-consent-button" data-cookie-settings-open>Configurações</button></div></div>' +
       '<div class="cookie-settings-panel" hidden><p class="cookie-consent-detail"> Saiba mais na <a href="/privacidade/">Política de Privacidade</a> e nas <a href="https://policies.google.com/technologies/ads?hl=pt-BR" target="_blank" rel="noopener noreferrer">informações do Google sobre publicidade</a>.</p>' +
       '<label class="cookie-consent-option"><input type="checkbox" data-cookie-ads><span><strong>Medições do Google</strong><span>Permite carregar a tag publicitária e medir os cliques de contato descritos acima. Desativada até sua autorização.</span></span></label>' +
