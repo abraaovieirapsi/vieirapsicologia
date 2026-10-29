@@ -50,3 +50,8 @@ CRIAR UMA NOVA LANDING
 5. Manter um único h1 (já existente), CRP correto e links reais.
 6. Adicionar a URL ao sitemap.xml. O link no menu já existe.
 7. Valores e bairro das landings seguem a home: R$ 100 online, R$ 145 presencial, Aldeota. Se mudarem, atualizar também index.html (raiz).
+
+
+FAQ: faq-fundo.webp = imagem de fundo da seção "Perguntas frequentes" (todas as landings). Sugestão: ~1920x1080, .webp, abaixo de 200 KB, tom suave/claro para manter a leitura.
+
+Psicoterapia online - FAQ: psicoterapia-online-faq-fundo.webp = imagem de fundo ESCURA da seção "Perguntas frequentes" desta landing (título em cor clara). ~1920x1080, .webp, abaixo de 200 KB.

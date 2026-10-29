@@ -1,0 +1,20 @@
+/* Aviso compacto de cookies — identidade visual Vieira Psicologia */
+.cookie-consent-banner{position:fixed;z-index:99999;left:50%;bottom:16px;transform:translateX(-50%);width:min(900px,calc(100% - 28px));padding:16px 18px;background:#f8f8f5;color:#383b3a;border:1px solid rgba(84,84,84,.24);box-shadow:0 8px 34px rgba(0,0,0,.18);font:400 13px/1.55 Inter,Arial,sans-serif;border-radius:8px}
+.cookie-consent-banner[hidden],.cookie-settings-panel[hidden]{display:none!important}
+.cookie-consent-main{display:flex;align-items:center;gap:18px;justify-content:space-between}
+.cookie-consent-copy{flex:1;min-width:0;margin:0}
+.cookie-consent-copy a,.cookie-consent-detail a{color:inherit;text-underline-offset:3px}
+.cookie-consent-actions{display:flex;flex-wrap:wrap;gap:8px;flex-shrink:0}
+.cookie-consent-button{appearance:none;border:1px solid #77736d;border-radius:4px;background:transparent;color:#383b3a;padding:9px 13px;min-height:38px;font:500 12px/1.2 Inter,Arial,sans-serif;cursor:pointer}
+.cookie-consent-button:hover,.cookie-consent-button:focus-visible{background:#eae5dd;outline-offset:2px}
+.cookie-settings-panel{margin-top:14px;padding-top:13px;border-top:1px solid rgba(84,84,84,.2)}
+.cookie-consent-detail{margin:0 0 12px;max-width:720px}
+.cookie-consent-option{display:flex;align-items:flex-start;gap:9px;margin:10px 0 14px}
+.cookie-consent-option input{margin-top:4px;accent-color:#383b3a}
+.cookie-consent-option strong{display:block;font-weight:600}
+.cookie-consent-option span{display:block;font-size:12px}
+.cookie-preferences-trigger{position:fixed;z-index:99998;left:12px;bottom:12px;border:1px solid rgba(84,84,84,.28);border-radius:4px;background:#f8f8f5;color:#383b3a;padding:7px 10px;font:500 11px/1.2 Inter,Arial,sans-serif;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.cookie-preferences-trigger[hidden]{display:none!important}
+.cookie-policy-settings{appearance:none;border:0;padding:0;background:none;color:inherit;text-decoration:underline;text-underline-offset:3px;font:inherit;cursor:pointer}
+@media(max-width:650px){.cookie-consent-banner{bottom:10px;padding:14px;width:calc(100% - 20px);max-height:calc(100dvh - 20px);overflow:auto}.cookie-consent-main{display:block}.cookie-consent-copy{margin-bottom:12px}.cookie-consent-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.cookie-consent-button{padding:9px 6px;font-size:11px;white-space:normal}.cookie-preferences-trigger{left:8px;bottom:8px}.cookie-settings-panel .cookie-consent-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.cookie-consent-banner *{scroll-behavior:auto}}
