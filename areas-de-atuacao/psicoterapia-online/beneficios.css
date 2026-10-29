@@ -1,0 +1,60 @@
+/* Seção "Benefícios da psicoterapia online" — exclusiva desta página. Reutiliza as variáveis de ../landing.css */
+.benefits{position:relative;overflow:hidden;isolation:isolate;background:#e4e5db;padding:112px 0 104px;border-top:1px solid var(--line)}
+.benefits-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.benefits-bg svg{position:absolute;display:block}
+.benefits-bg .b1{width:62%;min-width:560px;right:-14%;top:-12%;fill:#d9dccf}
+.benefits-bg .b2{width:48%;min-width:420px;left:-16%;bottom:-26%;fill:#eae5dd;opacity:.85}
+.benefits-bg .b3{width:30%;min-width:260px;right:3%;bottom:-16%;fill:none;stroke:#c7c8bf;stroke-width:1.2}
+.benefits-inner{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.benefits-head{position:sticky;top:48px}
+.benefits-head h2{font-size:clamp(38px,4.4vw,60px);line-height:1.04;max-width:11em}
+.benefits-head p{margin-top:26px;max-width:340px;font-size:17px;line-height:1.75;color:var(--dark)}
+.benefit-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.benefit:nth-child(even){transform:translateY(38px)}
+.benefit-card{height:100%;padding:30px 28px 32px;background:rgba(248,248,245,.72);border:1px solid rgba(84,84,84,.16);border-radius:26px 26px 26px 6px;transition:background-color .35s ease,box-shadow .35s ease,transform .35s ease}
+.benefit-icon{display:grid;place-items:center;width:54px;height:54px;margin-bottom:22px;color:#4f5348;background:#e9eadf;border-radius:58% 42% 52% 48%/48% 56% 44% 52%}
+.benefit-icon svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.benefit h3{font-size:29px;line-height:1.1;margin-bottom:12px}
+.benefit-toggle{all:unset;box-sizing:border-box;display:flex;width:100%;justify-content:space-between;align-items:flex-start;gap:14px;cursor:pointer}
+.benefit-toggle:focus-visible{outline:2px solid currentColor;outline-offset:6px}
+.benefit-mark{flex:0 0 22px;height:22px;margin-top:4px;position:relative}
+.benefit-mark:before,.benefit-mark:after{content:'';position:absolute;left:4px;right:4px;top:10px;height:1.5px;background:currentColor;transition:transform .3s ease}
+.benefit-mark:after{transform:rotate(90deg)}
+.benefit.is-open .benefit-mark:after{transform:rotate(0)}
+.benefit-body{display:grid;grid-template-rows:1fr;transition:grid-template-rows .45s cubic-bezier(.25,.1,.25,1),visibility .45s}
+.benefit-body p{min-height:0;overflow:hidden;font-size:15px;line-height:1.75}
+.benefits-foot{grid-column:1/-1;margin-top:64px;padding-top:26px;border-top:1px solid rgba(84,84,84,.22);max-width:700px}
+.benefits-foot p{font-size:16px;line-height:1.8;color:var(--dark)}
+@media(hover:hover){.benefit-card:hover,.benefit-card:focus-within{background:rgba(248,248,245,.96);box-shadow:0 22px 44px -28px rgba(56,59,58,.5);transform:translateY(-5px)}}
+/* entrada única: só é armada por JS; sem JS tudo permanece visível */
+.benefits.is-armed .reveal{opacity:0;transform:translateY(14px)}
+.benefits.is-armed .benefit.reveal:nth-child(even){transform:translateY(52px)}
+.benefits.is-armed.is-in .reveal{opacity:1;transform:none;transition:opacity .9s ease,transform .9s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i,0)*110ms)}
+.benefits.is-armed.is-in .benefit.reveal:nth-child(even){transform:translateY(38px)}
+/* toque: detalhes revelados por toque, sem depender de hover */
+.benefits.is-touch .benefit:not(.is-open) .benefit-body{grid-template-rows:0fr;visibility:hidden}
+.benefits.is-touch .benefit h3{margin-bottom:0}
+.benefits.is-touch .benefit.is-open h3{margin-bottom:12px}
+@media(max-width:900px){
+  .benefits{padding:76px 0 72px}
+  .benefits-inner{grid-template-columns:1fr;gap:38px}
+  .benefits-head{position:static}
+  .benefit-grid{grid-template-columns:1fr;gap:14px}
+  .benefit:nth-child(even),.benefits.is-armed .benefit.reveal:nth-child(even),.benefits.is-armed.is-in .benefit.reveal:nth-child(even){transform:none}
+  .benefits.is-armed .benefit.reveal:nth-child(even){transform:translateY(14px)}
+  .benefits-foot{margin-top:30px}
+}
+@media(max-width:650px){
+  .benefits{padding:60px 0 58px}
+  .benefit-card{padding:24px 22px 26px}
+  .benefit-icon{width:48px;height:48px;margin-bottom:16px}
+  .benefit h3{font-size:27px}
+  .benefits-head p{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  .benefits .reveal,.benefits.is-armed .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  .benefit:nth-child(even){transform:none}
+  .benefit-card,.benefit-body,.benefit-mark:before,.benefit-mark:after{transition:none!important}
+  .benefit-card:hover{transform:none}
+}
+.facts-note{margin-top:22px;font-size:15px;line-height:1.75}

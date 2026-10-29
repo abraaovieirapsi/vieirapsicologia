@@ -163,3 +163,57 @@ details[data-expanded="true"] summary:after{content:'−'}
 .closing .closing-note{font-size:12px;line-height:1.65;margin-top:16px;max-width:420px;color:#ece9e3}
 .closing .closing-note a{color:inherit;text-underline-offset:4px}
 .closing .closing-note a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+
+/* ===== Cartões de atendimento, FAQ com imagem de fundo e fechamento creme (v8) =====
+   Cartões e FAQ em seção própria: só aparecem onde o HTML usa .care-cards / .faq-section.
+   O fechamento em creme vale para todas as landings. */
+:root{--cream:#EEE9E2;--faq-bg-image:url("../assets/areas-de-atuacao/faq-fundo.webp")}
+/* Cartões de atendimento */
+.care-faq-inner--cards{max-width:1000px}
+.care-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.care-card{display:flex;flex-direction:column;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:34px 34px 30px}
+.care-card h3{font-size:clamp(28px,2.6vw,34px)}
+.care-price{display:flex;align-items:baseline;gap:10px;margin:18px 0 22px}
+.care-price strong{font:500 clamp(52px,5vw,64px)/1 var(--serif);letter-spacing:-.03em;color:var(--dark)}
+.care-price span{font-size:14px}
+.care-data{margin:0;border-top:1px solid var(--line)}
+.care-data>div{display:grid;grid-template-columns:105px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.care-data dt{font-size:14px;font-weight:500}
+.care-data dd{margin:0;font-size:15px;line-height:1.6;overflow-wrap:anywhere}
+.care-audience{margin-top:auto;padding-top:18px;font-size:13px;line-height:1.6;opacity:.85}
+.care-faq-inner--cards .care-faq-action{padding:40px 0 0}
+/* FAQ em seção própria, com imagem de fundo por CSS.
+   Imagem: salve o arquivo como assets/areas-de-atuacao/faq-fundo.webp (ou ajuste o caminho em --faq-bg-image, no :root acima).
+   O caminho é relativo a este landing.css. Sem o arquivo, a seção mostra apenas o fundo creme. */
+.faq-section{position:relative;isolation:isolate;background-color:var(--cream);background-image:var(--faq-bg-image);background-size:cover;background-position:center;background-repeat:no-repeat}
+.faq-section::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:rgba(248,248,245,.35)}
+.faq-inner{max-width:800px}
+.faq-section h2{margin-bottom:32px}
+.faq-section .questions{border-top:0;display:grid;gap:12px}
+.faq-section details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:0 24px}
+.faq-section details p{padding-right:8px}
+.faq-section summary:focus-visible{outline-offset:4px;border-radius:6px}
+/* Fechamento em creme */
+.closing{background:var(--cream);color:var(--ink)}
+.closing p,.closing .closing-note{color:var(--ink)}
+.closing .button{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.closing .button:hover{background:var(--dark)}
+.closing .button svg{fill:currentColor}
+@media(max-width:900px){.care-card{padding:28px 24px 26px}.care-data>div{grid-template-columns:92px minmax(0,1fr);gap:12px}}
+@media(max-width:650px){
+.care-cards{grid-template-columns:1fr;gap:20px}
+.care-card{padding:26px 22px 22px}
+.care-faq-inner--cards .care-faq-action{padding-top:28px}
+.faq-section details{padding:0 18px}
+.faq-section h2{font-size:38px;margin-bottom:24px}
+}
+@media(max-width:400px){.care-data>div{grid-template-columns:1fr;gap:3px}}
+
+
+/* Progresso da leitura na seção "Como funciona a terapia?" */
+.process .rail{overflow:hidden}
+.process .progress{height:0;transition:height .08s linear;will-change:height}
+@media (prefers-reduced-motion:reduce){
+  .process .progress{transition:none}
+  .reveal-ready .step{opacity:1;transform:none}
+}

@@ -22,6 +22,43 @@
     groups.forEach(el=>observer.observe(el));
   }
 
+  // Linha de progresso da seção "Como funciona a terapia?".
+  // O preenchimento acompanha a leitura da seção, como na animação da home.
+  document.querySelectorAll('.process').forEach(section=>{
+    const rail=section.querySelector('.rail');
+    const progress=section.querySelector('.progress');
+    if(!rail||!progress)return;
+
+    let ticking=false;
+    const updateProgress=()=>{
+      const sectionRect=section.getBoundingClientRect();
+      const railRect=rail.getBoundingClientRect();
+      const viewportHeight=window.innerHeight||document.documentElement.clientHeight;
+      const start=viewportHeight*0.78;
+      const end=-sectionRect.height*0.16;
+      const amount=Math.max(0,Math.min(1,(start-sectionRect.top)/(start-end)));
+      progress.style.height=`${amount*100}%`;
+      ticking=false;
+    };
+    const requestUpdate=()=>{
+      if(ticking)return;
+      ticking=true;
+      requestAnimationFrame(updateProgress);
+    };
+
+    if(preference.matches){
+      progress.style.height='100%';
+    }else{
+      updateProgress();
+      addEventListener('scroll',requestUpdate,{passive:true});
+      addEventListener('resize',requestUpdate);
+      preference.addEventListener?.('change',()=>{
+        if(preference.matches)progress.style.height='100%';
+        else requestUpdate();
+      });
+    }
+  });
+
   // Ano do rodapé (direitos reservados) atualizado automaticamente.
   document.querySelectorAll('[data-ano]').forEach(el=>{el.textContent=new Date().getFullYear()});
   // Bolinha do WhatsApp (celular): aparece depois da hero e some perto do fechamento/rodapé.
