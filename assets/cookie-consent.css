@@ -24,7 +24,7 @@
 @media(max-width:650px){
   .cookie-consent-banner{left:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));width:calc(100% - 88px);max-width:360px;padding:11px 12px;border-radius:8px;max-height:calc(100dvh - 24px);overflow:auto}
   .cookie-consent-main{display:block}
-  .cookie-consent-copy{font-size:11px;line-height:1.45;margin-bottom:8px}
+  .cookie-consent-copy{font-size:11px;line-height:1.45;margin-bottom:8px;max-width:190px}
   .cookie-consent-actions{justify-content:flex-start;gap:13px}
   .cookie-consent-button{min-height:29px;padding:6px 12px;font-size:10px}
   .cookie-preferences-link{font-size:10px}
