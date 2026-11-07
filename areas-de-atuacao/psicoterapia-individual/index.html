@@ -7,19 +7,20 @@
 <title>Psicoterapia presencial em Fortaleza — Abraão Vieira</title>
 <meta name="description" content="Psicoterapia presencial com Abraão Vieira, CRP 11/24139. Atendimento na Aldeota, em Fortaleza, para jovens a partir de 16 anos e adultos.">
 <link rel="canonical" href="https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/">
-<meta property="og:url" content="https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/">
 <meta name="theme-color" content="#f8f8f5">
 <meta property="og:title" content="Psicoterapia presencial em Fortaleza — Abraão Vieira">
 <meta property="og:description" content="Psicoterapia presencial com Abraão Vieira, CRP 11/24139. Atendimento na Aldeota, em Fortaleza, para jovens a partir de 16 anos e adultos.">
+<meta property="og:url" content="https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Cormorant+SC:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fontlibrary.org//face/glacial-indifference" type="text/css">
 <link rel="icon" type="image/png" href="../../assets/favicon.png">
 <link rel="stylesheet" href="../landing.css">
-<link rel="preload" as="image" href="../../assets/areas-de-atuacao/hero-retrato-desktop.webp" media="(min-width:651px)" fetchpriority="high">
-<link rel="preload" as="image" href="../../assets/areas-de-atuacao/hero-retrato-mobile.webp" media="(max-width:650px)" fetchpriority="high">
+<link rel="preload" as="image" href="../../assets/areas-de-atuacao/sobre-mobile.webp" media="(max-width:650px)" fetchpriority="high">
+<link rel="preload" as="image" href="../../assets/areas-de-atuacao/sobre-desktop.webp" media="(min-width:651px)" fetchpriority="high">
 <style>
 /* HERO DESTA LANDING — fotos compartilhadas em /assets/areas-de-atuacao/. Para usar outra foto só nesta landing, troque os nomes abaixo.
    Sem o arquivo, a hero mostra o fundo taupe liso. */
@@ -53,6 +54,409 @@
 .faq-section::before{background:rgba(40,36,32,.35)}
 .faq-section h2{color:var(--paper)}
 
+
+/* HERO V2 — reprodução do estudo aprovado no Canva.
+   A paleta desta seção é intencionalmente restrita a creme e chumbo. */
+.hero-v2{
+  --hero-cream:#fff6e2;
+  --hero-charcoal:#545454;
+  background:var(--hero-cream);
+  color:var(--hero-charcoal);
+  padding:0 0 38px;
+}
+.hero-v2 .wrap{
+  width:100%;
+  max-width:none;
+  margin:0 auto;
+}
+.hero-heading{
+  display:block;
+  margin:0;
+  padding:15px 0 14px;
+  text-align:center;
+}
+.hero-mark{display:none}
+.hero-heading-copy{width:100%;min-width:0}
+.hero-v2 .hero-kicker{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  width:100%;
+  margin:0 auto 3px;
+  padding:0 0;
+  color:var(--hero-charcoal);
+  font-family:'GlacialIndifferenceRegular','GlacialIndifference','Glacial Indifference',Arial,sans-serif;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.2;
+  letter-spacing:0;
+  text-transform:none;
+}
+.hero-v2 .hero-kicker::before,
+.hero-v2 .hero-kicker::after{
+  content:"";
+  display:block;
+  height:1px;
+  flex:1 1 auto;
+  background:rgba(84,84,84,.55);
+}
+.hero-v2 h1{
+  margin:0;
+  color:var(--hero-charcoal);
+  font-family:'Cormorant SC','Cormorant Garamond',Georgia,serif;
+  font-size:clamp(32px,8.8vw,43px);
+  font-weight:400;
+  line-height:1.08;
+  letter-spacing:.035em;
+}
+.hero-v2 .hero-portrait{
+  display:block;
+  width:100%;
+  aspect-ratio:1.88 / 1;
+  overflow:hidden;
+  border-radius:0;
+  background:#ddd;
+}
+.hero-v2 .hero-portrait picture{display:block;width:100%;height:100%}
+.hero-v2 .hero-portrait img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 43%;
+}
+.hero-v2 .hero-bio{
+  width:100%;
+  max-width:760px;
+  margin:0 auto;
+  padding:35px 26px 0;
+}
+.hero-v2 .hero-bio h2{
+  margin:0 0 10px;
+  color:var(--hero-charcoal);
+  font-family:var(--serif);
+  font-size:30px;
+  font-weight:400;
+  line-height:1.15;
+  letter-spacing:0;
+}
+.hero-v2 .hero-bio p{
+  max-width:680px;
+  margin:0;
+  color:var(--hero-charcoal);
+  font-family:Inter,Arial,sans-serif;
+  font-size:15.5px;
+  font-weight:400;
+  line-height:1.42;
+}
+.hero-cta-row{
+  display:flex;
+  align-items:center;
+  gap:0;
+  width:calc(100% + 52px);
+  margin:29px 0 0 -26px;
+}
+.hero-cta-row::before,
+.hero-cta-row::after{
+  content:"";
+  display:block;
+  height:1px;
+  flex:1 1 auto;
+  min-width:8px;
+  background:rgba(84,84,84,.55);
+}
+.hero-v2 .hero-bio .button{
+  display:inline-flex;
+  flex:0 0 auto;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:auto;
+  max-width:calc(100% - 38px);
+  min-height:47px;
+  margin:0;
+  padding:10px 19px;
+  border:1px solid #545454;
+  border-radius:12px;
+  background:#545454;
+  color:#fff6e2;
+  font-family:Inter,Arial,sans-serif;
+  font-size:15px;
+  font-weight:500;
+  line-height:1.25;
+  white-space:nowrap;
+  text-decoration:none;
+}
+.hero-v2 .hero-bio .button:hover{
+  background:#454545;
+  border-color:#454545;
+}
+.hero-v2 .hero-bio .button svg{
+  display:block;
+  flex:0 0 24px;
+  width:24px;
+  height:24px;
+  fill:currentColor;
+}
+@media(min-width:651px){
+  .hero-v2{padding-bottom:54px}
+  .hero-heading{padding:19px 0 17px}
+  .hero-v2 .hero-kicker{max-width:none;font-size:15px;gap:16px}
+  .hero-v2 h1{font-size:48px}
+  .hero-v2 .hero-portrait{aspect-ratio:2.15 / 1}
+  .hero-v2 .hero-bio{padding:38px 44px 0}
+  .hero-v2 .hero-bio h2{font-size:34px}
+  .hero-v2 .hero-bio p{font-size:16px;line-height:1.55}
+  .hero-cta-row{margin-top:30px}
+}
+@media(max-width:380px){
+  .hero-heading{padding:13px 0 12px}
+  .hero-v2 .hero-kicker{font-size:13px}
+  .hero-v2 h1{font-size:32px}
+  .hero-v2 .hero-bio{padding:29px 22px 0}
+  .hero-v2 .hero-bio h2{font-size:28px}
+  .hero-v2 .hero-bio p{font-size:14px;line-height:1.45}
+  .hero-cta-row{width:calc(100% + 44px);margin:25px 0 0 -22px}
+  .hero-v2 .hero-bio .button{gap:6px;padding:10px 12px;font-size:13px}
+  .hero-v2 .hero-bio .button svg{width:21px;height:21px;flex-basis:21px}
+}
+
+/* PROCESSO TERAPÊUTICO V2 — carrossel editorial com progressão */
+.process-carousel{background:#eeeee8;overflow:hidden}
+.process-carousel-wrap{display:block}
+.process-carousel .process-intro{margin:0 0 26px}
+.process-carousel .process-intro h2{margin:0;font:500 clamp(34px,4vw,48px)/1.08 var(--serif);letter-spacing:-.025em;color:var(--ink)}
+.process-carousel-ui{--card-gap:16px;min-width:0}
+.process-carousel-viewport{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch;padding:2px 1px 12px;outline-offset:5px}
+.process-carousel-viewport::-webkit-scrollbar{display:none}
+.process-carousel-track{display:flex;gap:var(--card-gap);width:100%}
+.process-card{box-sizing:border-box;flex:0 0 100%;min-width:0;min-height:clamp(300px,34vw,390px);padding:clamp(30px,4vw,52px);background:var(--cream);border:1px solid rgba(92,82,71,.13);border-radius:3px;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between}
+.process-card-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.process-card-number{font:400 clamp(42px,5vw,62px)/.9 var(--serif);letter-spacing:-.04em;color:var(--ink)}
+.process-card-label{font:500 10px/1.4 var(--sans);letter-spacing:.18em;color:var(--ink)}
+.process-card h3{font:500 clamp(29px,3.5vw,42px)/1.12 var(--serif);letter-spacing:-.025em;color:var(--ink);max-width:650px;margin:30px 0 16px}
+.process-card p{font-size:clamp(15px,1.35vw,17px);line-height:1.8;color:var(--ink);max-width:720px;margin:0}
+.process-carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:19px 0 0}
+.process-progress{position:relative;display:block;flex:1;max-width:220px;height:3px;background:#d1cec5;overflow:visible}
+.process-progress-fill{display:block;width:var(--progress,0%);height:100%;background:var(--ink);transition:width .42s cubic-bezier(.22,.61,.36,1)}
+.process-arrows{display:flex;gap:9px}
+.process-arrow{width:42px;height:42px;border:1px solid #aaa398;border-radius:50%;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.process-arrow svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.process-arrow:hover:not(:disabled){background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.process-arrow:disabled{opacity:.35;cursor:not-allowed}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:650px){
+ .process-carousel{padding:48px 0 54px}
+ .process-carousel .wrap{width:calc(100% - 44px)}
+ .process-carousel .process-intro{margin-bottom:20px}
+ .process-carousel .process-intro h2{font-size:34px}
+ .process-carousel-ui{--card-gap:12px}
+ .process-carousel-viewport{margin-right:-22px;padding-right:22px}
+ .process-carousel-track{width:100%}
+ .process-card{flex-basis:calc(100% - 30px);min-height:clamp(290px,84vw,360px);padding:25px 23px 27px}
+ .process-card-top{padding-bottom:19px}
+ .process-card-number{font-size:48px}
+ .process-card-label{font-size:9px;letter-spacing:.15em}
+ .process-card h3{font-size:30px;line-height:1.12;margin:27px 0 15px}
+ .process-card p{font-size:14px;line-height:1.75}
+ .process-carousel-controls{margin-top:15px}
+ .process-progress{max-width:150px}
+ .process-arrow{width:39px;height:39px}
+}
+@media(prefers-reduced-motion:reduce){
+ .process-carousel-viewport{scroll-behavior:auto}
+ .process-progress-fill,.process-arrow{transition:none}
+}
+
+
+/* Perfil do Google: cartão editorial compacto com foto real do consultório. */
+.google-profile-section{background:var(--paper);padding:42px 0 48px;border-top:1px solid var(--line)}
+.google-profile-card{max-width:760px;margin:0 auto;padding:27px 30px 0;background:var(--cream);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.google-profile-main{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.google-profile-copy{min-width:0;flex:1}
+.google-profile-copy h2{max-width:440px;margin:0 0 13px;font-family:var(--serif);font-size:clamp(30px,3.3vw,40px);font-weight:500;line-height:1.08;color:var(--ink)}
+.google-profile-name{margin:0 0 5px;font-weight:600;font-size:15px;line-height:1.45}
+.google-profile-description{max-width:390px;margin:0;color:var(--ink);font-size:13px;line-height:1.65}
+.google-profile-photo{display:block;flex:0 0 104px;width:104px;height:136px;object-fit:cover;object-position:center 54%;border-radius:10px}
+.google-profile-link{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:22px;padding:17px 0;border-top:1px solid var(--line);color:var(--ink);font-size:14px;font-weight:600;text-decoration:none}
+.google-profile-link svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.google-profile-link:hover svg{transform:translate(2px,-2px)}
+.google-profile-link:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+@media(max-width:650px){
+ .google-profile-section{padding:34px 0 40px}
+ .google-profile-section .wrap{width:calc(100% - 44px)}
+ .google-profile-card{padding:22px 20px 0;border-radius:16px}
+ .google-profile-main{gap:14px;align-items:center}
+ .google-profile-copy h2{font-size:29px;line-height:1.08;margin-bottom:12px}
+ .google-profile-name{font-size:13px}
+ .google-profile-description{font-size:12px;line-height:1.55}
+ .google-profile-photo{flex-basis:82px;width:82px;height:112px;border-radius:8px;object-position:center 54%}
+ .google-profile-link{margin-top:18px;padding:15px 0;font-size:13px}
+}
+
+
+/* Footer compacto e centralizado — V2. */
+.footer{padding:20px 0;text-align:center}
+.footer-inner{flex-direction:column;justify-content:center;gap:7px}
+.footer-meta{margin-top:3px}
+.footer-links{justify-content:center;gap:20px;margin-top:7px;flex-wrap:wrap}
+.footer-legal{margin-top:10px;padding-top:10px}
+@media(max-width:650px){
+ .footer{padding:18px 0}
+ .footer-inner{gap:6px}
+ .footer-links{margin-top:7px;gap:16px}
+ .footer-legal{margin-top:9px;padding-top:9px}
+}
+
+
+/* Experimento 02 — linguagem visual baseada no protótipo do Canva */
+.process-carousel{background:#FAFAFA}
+.process-carousel .process-intro h2{color:#545454}
+.process-card{
+  position:relative;
+  overflow:hidden;
+  background:#FFF4E1;
+  border:1px solid rgba(84,84,84,.10);
+  border-radius:11px;
+  justify-content:center;
+  gap:0;
+  padding:clamp(30px,4vw,48px);
+}
+.process-card[data-step]::before{
+  content:attr(data-step);
+  position:absolute;
+  right:20px;
+  bottom:-26px;
+  z-index:0;
+  font:400 clamp(118px,17vw,190px)/.85 var(--serif);
+  letter-spacing:-.07em;
+  color:rgba(84,84,84,.075);
+  pointer-events:none;
+}
+.process-card > *{position:relative;z-index:1}
+.process-card-top{
+  align-self:flex-start;
+  justify-content:flex-start;
+  gap:9px;
+  padding:0;
+  border:0;
+  width:100%;
+}
+.process-card-number{
+  font:400 18px/1.2 var(--serif);
+  letter-spacing:0;
+  color:#545454;
+}
+.process-card-label{
+  font:400 18px/1.2 var(--serif);
+  letter-spacing:0;
+  text-transform:none;
+  color:#545454;
+}
+.process-card-number::after{content:" —"; white-space:pre}
+.process-card h3{
+  align-self:flex-start;
+  width:100%;
+  max-width:590px;
+  margin:29px 0 10px;
+  text-align:left;
+  font-weight:500;
+  color:#545454;
+}
+.process-card p{
+  align-self:flex-start;
+  width:100%;
+  max-width:520px;
+  margin:0;
+  text-align:left;
+  line-height:1.55;
+  color:#545454;
+}
+.process-card-continuity{
+  background:#545454;
+  border-color:#545454;
+}
+.process-card-continuity h3,
+.process-card-continuity p{color:#FFF6E2}
+.process-card-continuity h3{margin-top:0}
+.process-card-continuity::before{display:none}
+.process-progress{
+  flex:1 1 auto;
+  width:auto;
+  max-width:none;
+  background:rgba(84,84,84,.25);
+  height:3px;
+  overflow:visible;
+}
+.process-progress-fill{display:none}
+.process-progress-marker{
+  position:absolute;
+  z-index:2;
+  width:32px;
+  height:32px;
+  left:clamp(16px,var(--progress,0%),calc(100% - 16px));
+  top:50%;
+  transform:translate(-50%,-50%);
+  object-fit:contain;
+  pointer-events:none;
+  transition:left .42s cubic-bezier(.22,.61,.36,1);
+}
+.process-arrow{
+  border-color:#545454;
+  color:#545454;
+}
+.process-arrow:hover:not(:disabled){
+  background:#545454;
+  border-color:#545454;
+  color:#FFF6E2;
+}
+@media(max-width:650px){
+  .process-card{padding:25px 27px 27px;border-radius:11px}
+  .process-card-top{gap:8px}
+  .process-card-number,.process-card-label{font-size:18px}
+  .process-card h3{font-size:30px;margin:29px 0 10px;line-height:1.12}
+  .process-card p{font-size:16px;line-height:1.48}
+  .process-card[data-step]::before{right:14px;bottom:-22px;font-size:132px}
+  .process-progress-marker{width:32px;height:32px}
+  .process-progress{max-width:none}
+  .process-arrow{width:39px;height:39px}
+}
+@media(prefers-reduced-motion:reduce){
+  .process-progress-marker{transition:none}
+}
+
+.process-card:not(.process-card-continuity),
+.process-card:not(.process-card-continuity) h3,
+.process-card:not(.process-card-continuity) p,
+.process-card:not(.process-card-continuity) .process-card-number,
+.process-card:not(.process-card-continuity) .process-card-label{color:#545454}
+.process-card[data-step]::before{color:rgba(84,84,84,.10)}
+
+.google-profile-card{background:#FFF4E1}
+
+/* Correção final: centralizar o nome na coluna direita do hero apenas no desktop. */
+@media (min-width: 1025px) {
+  .landing-v2 .hero-v2 .hero-heading {
+    width: 100%;
+    text-align: center;
+  }
+  .landing-v2 .hero-v2 .hero-heading-copy {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  .landing-v2 .hero-v2 .hero-heading-copy h1 {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
 </style>
 <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
 <meta property="og:image" content="https://vieirapsicologia.com.br/assets/og-image.jpg">
@@ -60,6 +464,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Abraão Vieira, psicólogo clínico em Fortaleza">
 <meta name="twitter:card" content="summary_large_image">
+<!-- Dados estruturados omitidos nesta cópia de trabalho não indexável. -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -125,8 +531,8 @@
       "@type": "WebPage",
       "@id": "https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/#pagina",
       "url": "https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/",
-      "name": "Psicoterapia em Fortaleza e online — Abraão Vieira",
-      "description": "Psicoterapia individual com Abraão Vieira, CRP 11/24139. Atendimento presencial na Aldeota, em Fortaleza, e online para jovens e adultos.",
+      "name": "Psicoterapia presencial em Fortaleza — Abraão Vieira",
+      "description": "Psicoterapia presencial com Abraão Vieira, CRP 11/24139. Atendimento na Aldeota, em Fortaleza, para jovens a partir de 16 anos e adultos.",
       "inLanguage": "pt-BR",
       "isPartOf": {
         "@id": "https://vieirapsicologia.com.br/#site"
@@ -182,168 +588,196 @@
   ]
 }
 </script>
-  <link rel="stylesheet" href="/assets/cookie-consent.css">
 </head>
-<body>
+<body class="landing-v2">
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
-<header class="wrap masthead">
-<div class="brand">
-<img src="../../assets/logo-hero-graphite.svg" alt="">
-<div>
-<div class="brand-name">Abraão Vieira</div>
-<div class="brand-role">Psicólogo clínico</div>
-</div>
-</div>
-</header>
 <main id="conteudo">
-<section class="hero" aria-labelledby="titulo">
+<section class="hero-v2 hero-motion" aria-labelledby="titulo">
 <div class="wrap">
-<div class="hero-text">
-<h1 id="titulo">Psicoterapia presencial em Fortaleza</h1>
-<p class="hero-place">Atendimentos na Av. Dom Luís, na Aldeota, para jovens a partir de 16 anos e adultos.</p>
-<a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários e tirar dúvidas</a>
-</div>
-</div>
-</section>
-<section class="recognition">
-<div class="wrap split">
-<h2>Nem sempre é fácil saber quando procurar psicoterapia</h2>
-<div>
-<p>Talvez sejam preocupações que ocupam espaço demais, situações que continuam se repetindo apesar das tentativas de fazer diferente ou uma dificuldade que tem afetado suas relações e sua rotina.</p>
-<p>Você pode perceber o que incomoda e, ainda assim, não saber como lidar com isso. Na psicoterapia, podemos olhar juntos para essas experiências e compreender o que precisa de atenção.</p>
-</div>
-</div>
-</section>
-<section class="section process">
-<div class="wrap process-grid">
-<div class="process-intro">
-<h2>Como funciona a terapia?</h2>
-<p>A terapia começa com a compreensão do que levou você a procurar acompanhamento. Ao longo das sessões, observamos padrões, exploramos alternativas e construímos formas de lidar com as dificuldades no cotidiano.</p>
-</div>
-<div class="steps">
-<div class="rail" aria-hidden="true">
-<span class="progress">
-</span>
-</div>
-<article class="step">
-<div class="label">COMPREENDER</div>
-<h3>O que está acontecendo?</h3>
-<p>Conhecer sua história, entender o que levou você a procurar acompanhamento e observar como essas dificuldades afetam sua vida.</p>
-</article>
-<article class="step">
-<div class="label">OBSERVAR</div>
-<h3>Como isso aparece no seu dia a dia?</h3>
-<p>Perceber como pensamentos, emoções e maneiras de agir se relacionam nas situações que você enfrenta.</p>
-</article>
-<article class="step">
-<div class="label">EXPERIMENTAR</div>
-<h3>O que pode ser feito de outra maneira?</h3>
-<p>Explorar alternativas para lidar com essas situações e observar o que ajuda, o que não funciona como esperado e o que pode ser ajustado.</p>
-</article>
-<article class="step">
-<div class="label">CONSTRUIR</div>
-<h3>Que mudanças fazem sentido para você?</h3>
-<p>Desenvolver maneiras de lidar com as dificuldades que possam ser incorporadas ao cotidiano, de acordo com suas necessidades e seus valores.</p>
-</article>
-<p class="process-note">Esses movimentos não seguem necessariamente uma ordem fixa. Eles se entrelaçam e podem ser retomados ao longo da terapia, conforme suas necessidades e o andamento do acompanhamento.</p>
-</div>
+  <div class="hero-heading">
+    <div class="hero-heading-copy">
+      <p class="hero-kicker">psicólogo clínico</p>
+      <h1 id="titulo">Abraão Vieira</h1>
+    </div>
+  </div>
+  <div class="hero-portrait">
+    <picture>
+      <source media="(max-width:650px)" srcset="../../assets/areas-de-atuacao/sobre-mobile.webp">
+      <source media="(max-width:1024px)" srcset="../../assets/areas-de-atuacao/sobre-tablet.webp">
+      <img src="../../assets/areas-de-atuacao/sobre-desktop.webp" alt="Abraão Vieira, psicólogo clínico" width="1024" height="768" fetchpriority="high" decoding="async">
+    </picture>
+  </div>
+  <div class="hero-bio">
+    <h2>Minha atuação</h2>
+    <p>Sou psicólogo e trabalho com a Terapia Cognitivo-Comportamental (TCC), buscando compreender as dificuldades de cada pessoa e construir, em colaboração, estratégias que possam ser aplicadas às situações concretas do cotidiano.</p>
+    <div class="hero-cta-row">
+      <a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários pelo WhatsApp</a>
+    </div>
+  </div>
 </div>
 </section>
-<section class="section about-section">
-<div class="wrap about">
-<div class="portrait">
-<picture>
-<source media="(max-width:650px)" srcset="../../assets/areas-de-atuacao/sobre-mobile.webp">
-<source media="(max-width:1024px)" srcset="../../assets/areas-de-atuacao/sobre-tablet.webp">
-<img src="../../assets/areas-de-atuacao/sobre-desktop.webp" alt="Abraão Vieira, psicólogo" width="1000" height="1250" loading="lazy" decoding="async">
-</picture>
-</div>
-<div>
-<h2 class="about-heading">Sobre o psicólogo</h2>
-<p class="professional-name">Abraão Vieira</p>
-<div class="credential">Psicólogo · CRP 11/24139</div>
-<p>Sou psicólogo formado pela Universidade Federal do Ceará. No consultório, procuro conversar com clareza e proximidade, para que você possa perguntar, dizer o que pensa e compreender o que estamos trabalhando juntos.</p>
-<p>Trabalho com a Terapia Cognitivo-Comportamental e contribuições da Logoterapia para construir com você estratégias práticas, orientadas pelos seus próprios valores e pelo que deseja mudar na sua vida.</p>
-</div>
+<section class="section process process-carousel" aria-labelledby="process-title">
+<div class="wrap process-carousel-wrap">
+  <div class="process-intro">
+    <h2 id="process-title">Como funciona a terapia?</h2>
+  </div>
+  <div class="process-carousel-ui" data-process-carousel>
+    <div class="process-carousel-viewport" tabindex="0" aria-label="Etapas do processo terapêutico. Deslize para navegar entre os cartões.">
+      <div class="process-carousel-track">
+        <article class="process-card" data-step="01" aria-label="Etapa 1 de 5">
+          <div class="process-card-top"><span class="process-card-number">01</span><span class="process-card-label">Compreender</span></div>
+          <h3>O que está acontecendo?</h3>
+          <p>Conhecer sua história, entender o que levou você a procurar acompanhamento e observar como essas dificuldades afetam sua vida.</p>
+        </article>
+        <article class="process-card" data-step="02" aria-label="Etapa 2 de 5">
+          <div class="process-card-top"><span class="process-card-number">02</span><span class="process-card-label">Observar</span></div>
+          <h3>Como isso aparece no seu dia a dia?</h3>
+          <p>Perceber como pensamentos, emoções e maneiras de agir se relacionam nas situações que você enfrenta.</p>
+        </article>
+        <article class="process-card" data-step="03" aria-label="Etapa 3 de 5">
+          <div class="process-card-top"><span class="process-card-number">03</span><span class="process-card-label">Experimentar</span></div>
+          <h3>O que pode ser feito de outra maneira?</h3>
+          <p>Explorar alternativas para lidar com essas situações e observar o que ajuda e o que pode ser ajustado individualmente.</p>
+        </article>
+        <article class="process-card" data-step="04" aria-label="Etapa 4 de 5">
+          <div class="process-card-top"><span class="process-card-number">04</span><span class="process-card-label">Construir</span></div>
+          <h3>Que mudanças fazem sentido para você?</h3>
+          <p>Desenvolver estratégias práticas para lidar com as dificuldades no seu cotidiano de forma personalizada.</p>
+        </article>
+        <article class="process-card process-card-continuity" aria-label="Etapa 5 de 5">
+          
+          <h3>O movimento não precisa ser linear.</h3>
+          <p>Essas etapas se entrelaçam e podem ser retomadas ao longo da terapia, conforme suas necessidades e o andamento do acompanhamento.</p>
+        </article>
+      </div>
+    </div>
+    <div class="process-carousel-controls">
+      <div class="process-progress" role="progressbar" aria-label="Progresso das etapas" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" style="--progress:0%">
+        <span class="process-progress-fill" aria-hidden="true"></span><img class="process-progress-marker" src="../../assets/logo-process-marker.svg" alt="" aria-hidden="true">
+      </div>
+      <div class="process-arrows">
+        <button class="process-arrow process-prev" type="button" aria-label="Etapa anterior" disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"/></svg>
+        </button>
+        <button class="process-arrow process-next" type="button" aria-label="Próxima etapa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+    <p class="process-live sr-only" aria-live="polite" aria-atomic="true">Etapa 1 de 5: Compreender</p>
+  </div>
 </div>
 </section>
-<section class="section care-faq-section" aria-labelledby="atendimento-titulo">
-<div class="wrap care-faq-inner">
-<h2 id="atendimento-titulo">Informações sobre o atendimento</h2>
-<div class="care-cards care-cards--single">
-<div class="care-card">
-<h3>Psicoterapia presencial</h3>
-<p class="care-price"><strong>R$ 145</strong><span>por sessão</span></p>
-<dl class="care-data">
-<div><dt>Modalidade</dt><dd>Presencial</dd></div>
-<div><dt>Local</dt><dd>Avenida Dom Luís, 300, sala 810, 8º andar, Shopping Avenida, Aldeota, Fortaleza-CE</dd></div>
-<div><dt>Para quem</dt><dd>Psicoterapia individual para jovens a partir de 16 anos e adultos.</dd></div>
-<div><dt>Duração</dt><dd>40 a 50 minutos</dd></div>
-<div><dt>Pagamento</dt><dd>Pix</dd></div>
-</dl>
-</div>
-<p class="care-online-note">Você busca atendimento online? Consulte a <a href="../psicoterapia-online/">página de psicoterapia online</a>.</p>
-</div>
-<div class="care-faq-action">
-<a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários e tirar dúvidas</a>
-</div>
-</div>
+
+
+<section class="section practical-section" aria-labelledby="practical-title">
+  <div class="wrap practical-inner">
+    <div class="practical-heading">
+      <div class="practical-kicker" aria-label="Psicoterapia presencial">
+        <span class="practical-rule" aria-hidden="true"></span>
+        <span>psicoterapia presencial</span>
+        <span class="practical-rule" aria-hidden="true"></span>
+      </div>
+      <h2 id="practical-title">Informações Práticas</h2>
+    </div>
+
+    <dl class="practical-data">
+      <div class="practical-row">
+        <dt>Duração</dt>
+        <dd>50 minutos</dd>
+      </div>
+      <div class="practical-row">
+        <dt>Investimento</dt>
+        <dd>R$ 145 <span>por sessão</span></dd>
+      </div>
+      <div class="practical-row">
+        <dt>Pagamento</dt>
+        <dd>Pix</dd>
+      </div>
+      <div class="practical-row practical-row-address">
+        <dt>Endereço</dt>
+        <dd>Avenida Dom Luís, 300, sala 810, 8º andar, Shopping Avenida, Aldeota, Fortaleza-CE</dd>
+      </div>
+    </dl>
+
+    <p class="practical-online-note">Você busca atendimento online? Consulte a <a href="../psicoterapia-online/">página de psicoterapia online</a>.</p>
+
+    <div class="practical-action">
+      <a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários pelo WhatsApp</a>
+    </div>
+  </div>
+</section><section class="section google-profile-section" aria-labelledby="google-profile-title">
+  <div class="wrap">
+    <div class="google-profile-card">
+      <div class="google-profile-main">
+        <div class="google-profile-copy">
+          <h2 id="google-profile-title">Conheça meu trabalho no Google</h2>
+          <p class="google-profile-name">Abraão Vieira — Psicólogo</p>
+          <p class="google-profile-description">Conheça meu perfil profissional e as avaliações publicadas no Google.</p>
+        </div>
+        <img class="google-profile-photo" src="../../assets/areas-de-atuacao/google-consultorio.webp" alt="Ambiente do consultório onde acontecem os atendimentos presenciais" loading="lazy" decoding="async" width="450" height="600">
+      </div>
+      <a class="google-profile-link" href="https://maps.app.goo.gl/rQfD8PoUoJBadVdu8" target="_blank" rel="noopener noreferrer">
+        <span>Ver perfil e avaliações</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+  </div>
 </section>
-<section class="section faq-section" aria-labelledby="faq-titulo">
-<div class="wrap faq-inner">
-<div class="faq-continuation">
-<h2 id="faq-titulo">Perguntas frequentes</h2>
-<div class="questions">
-<details>
+<section class="section closing-faq-section" aria-labelledby="closing-cta-title">
+  <div class="wrap closing-faq-inner">
+    <div class="closing-cta">
+      <h2 id="closing-cta-title">Ficou com alguma dúvida?</h2>
+      <p>Estou à disposição para esclarecer suas dúvidas sobre a psicoterapia e consultar os horários disponíveis.</p>
+      <div class="closing-cta-button">
+        <span class="closing-rule" aria-hidden="true"></span>
+        <a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários pelo WhatsApp</a>
+        <span class="closing-rule" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="closing-faq-list">
+      <div class="questions">
+        <details>
 <summary>Como é a primeira sessão?</summary>
 <div class="answer">
 <p>Conversamos sobre o que levou você a procurar psicoterapia, como isso tem afetado sua vida e o que espera do acompanhamento. A partir dessa conversa, começamos a definir juntos os objetivos da terapia, que podem ser aprofundados ou revistos ao longo das sessões.</p>
 </div>
-</details>
-<details>
+</details><details>
+  <summary>O que conversamos nas sessões é sigiloso?</summary>
+  <div class="answer">
+    <p>Sim. O sigilo profissional é um princípio fundamental da psicoterapia. As informações compartilhadas durante o acompanhamento são protegidas pelo sigilo, respeitadas as condições e exceções previstas no Código de Ética Profissional.</p>
+  </div>
+</details><details>
 <summary>Preciso ter um diagnóstico para começar?</summary>
 <div class="answer">
 <p>Não. Você pode procurar psicoterapia por dificuldades que percebe no cotidiano, mesmo sem um diagnóstico ou uma explicação definida para o que está acontecendo.</p>
 </div>
-</details>
-<details>
+</details><details>
 <summary>O que é a Terapia Cognitivo-Comportamental (TCC)?</summary>
 <div class="answer">
-<p>A TCC é uma abordagem da psicologia que busca compreender como pensamentos, emoções e comportamentos se relacionam e influenciam nossas experiências. A partir dessa compreensão, trabalhamos juntos na construção de estratégias e exercícios práticos que ajudem você a lidar com as dificuldades e promover mudanças no cotidiano.</p>
+<p>A TCC é uma abordagem que busca compreender como pensamentos, emoções e comportamentos se relacionam. A partir disso, trabalhamos juntos na construção de estratégias e exercícios práticos para lidar com as dificuldades do cotidiano.</p>
 </div>
-</details>
-<details>
+</details><details>
 <summary>Por quanto tempo preciso fazer terapia?</summary>
 <div class="answer">
 <p>A duração depende das dificuldades, dos objetivos e do andamento do acompanhamento. Ao longo do processo, conversamos sobre os avanços, o que ainda precisa ser trabalhado e a continuidade das sessões.</p>
 </div>
-</details>
-<details>
+</details><details>
 <summary>E se eu tiver dificuldade para falar sobre algum assunto?</summary>
 <div class="answer">
 <p>Você pode dizer que um assunto é difícil de abordar, mesmo sem entrar em detalhes naquele momento. Podemos conversar sobre essa dificuldade e encontrar uma maneira de trabalhar a questão respeitando seu ritmo.</p>
 </div>
-</details>
-<details>
+</details><details>
 <summary>O atendimento aceita convênio ou plano de saúde?</summary>
 <div class="answer">
 <p>Não. Os atendimentos são particulares, com valor de R$ 145 por sessão presencial. Se tiver dúvidas sobre o funcionamento do atendimento, você pode entrar em contato pelo WhatsApp.</p>
 </div>
 </details>
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="closing">
-<div class="wrap closing-inner">
-<h2>Vamos conversar sobre o atendimento</h2>
-<div>
-<p>Entre em contato para esclarecer suas dúvidas e consultar os horários disponíveis. Se decidir começar, combinamos o agendamento da primeira sessão presencial.</p>
-<a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários e tirar dúvidas</a>
-<p class="closing-note">Ao clicar, você abre o WhatsApp. Evite enviar informações clínicas detalhadas por mensagem. <a href="../../privacidade/">Política de Privacidade</a></p>
-</div>
-</div>
-</section>
+
 </main>
 <footer class="footer">
 <div class="wrap">
@@ -361,8 +795,122 @@
 </div>
 </footer>
 <a class="wa-fab" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg></a>
+
+<script>
+(()=> {
+  const root=document.querySelector('[data-process-carousel]');
+  if(!root)return;
+  const viewport=root.querySelector('.process-carousel-viewport');
+  const cards=[...root.querySelectorAll('.process-card')];
+  const prev=root.querySelector('.process-prev');
+  const next=root.querySelector('.process-next');
+  const progress=root.querySelector('.process-progress');
+  const live=root.querySelector('.process-live');
+  const names=['Compreender','Observar','Experimentar','Construir','Observação final'];
+  let active=0;
+  const update=()=>{
+    const viewportRect=viewport.getBoundingClientRect();
+    const center=viewportRect.left+viewport.clientWidth*.35;
+    let nearest=0,dist=Infinity;
+    cards.forEach((card,i)=>{
+      const d=Math.abs(card.getBoundingClientRect().left-center);
+      if(d<dist){dist=d;nearest=i;}
+    });
+    active=nearest;
+    progress.style.setProperty('--progress',`${(active/(cards.length-1))*100}%`);
+    progress.setAttribute('aria-valuenow',String(active+1));
+    prev.disabled=active===0;
+    next.disabled=active===cards.length-1;
+    live.textContent=`Etapa ${active+1} de ${cards.length}: ${names[active]}`;
+  };
+  const go=(index)=>{
+    const target=Math.max(0,Math.min(cards.length-1,index));
+    const left=viewport.scrollLeft+cards[target].getBoundingClientRect().left-viewport.getBoundingClientRect().left;
+    viewport.scrollTo({left,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+  };
+  prev.addEventListener('click',()=>go(active-1));
+  next.addEventListener('click',()=>go(active+1));
+  viewport.addEventListener('scroll',()=>requestAnimationFrame(update),{passive:true});
+  viewport.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'){e.preventDefault();go(active+1);}
+    if(e.key==='ArrowLeft'){e.preventDefault();go(active-1);}
+  });
+  update();
+  addEventListener('resize',update,{passive:true});
+})();
+</script>
+
 <script src="../landing.js" defer>
 </script>
-  <script src="/assets/cookie-consent.js" defer></script>
+  <script src="/assets/google-ads.js" defer></script>
+<script>
+(function(){
+  var section=document.querySelector('.practical-section');
+  if(!section) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){section.classList.add('is-visible');return;}
+  section.classList.add('motion-ready');
+  if(!('IntersectionObserver' in window)){section.classList.add('is-visible');return;}
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        section.classList.add('is-visible');
+        observer.unobserve(section);
+      }
+    });
+  },{threshold:0.18});
+  observer.observe(section);
+})();
+</script>
+
+<script>
+(function(){
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) return;
+
+  var revealSelectors=[
+    '.process-intro',
+    '.process-carousel-ui',
+    '.google-profile-copy',
+    '.google-profile-photo',
+    '.google-profile-link',
+    '.closing-cta h2',
+    '.closing-cta > p',
+    '.closing-cta-button',
+    '.closing-faq-list details',
+    '.landing-v2 .footer-inner'
+  ];
+
+  var targets=[];
+  revealSelectors.forEach(function(selector){
+    document.querySelectorAll(selector).forEach(function(el){
+      el.classList.add('scroll-reveal');
+      targets.push(el);
+    });
+  });
+
+  if(!targets.length) return;
+  if(!('IntersectionObserver' in window)){
+    targets.forEach(function(el){el.classList.add('revealed');});
+    return;
+  }
+
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -5% 0px'});
+
+  targets.forEach(function(el){observer.observe(el);});
+
+  var hero=document.querySelector('.hero-motion');
+  if(hero){
+    hero.classList.add('hero-motion-ready');
+    requestAnimationFrame(function(){hero.classList.add('hero-motion-start');});
+  }
+})();
+</script>
 </body>
 </html>
