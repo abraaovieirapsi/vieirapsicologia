@@ -7,7 +7,7 @@
 <title>Psicoterapia presencial em Fortaleza — Abraão Vieira</title>
 <meta name="description" content="Psicoterapia presencial com Abraão Vieira, CRP 11/24139. Atendimento na Aldeota, em Fortaleza, para jovens a partir de 16 anos e adultos.">
 <link rel="canonical" href="https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/">
-<meta name="theme-color" content="#f8f8f5">
+<meta name="theme-color" content="#F7F5EF">
 <meta property="og:title" content="Psicoterapia presencial em Fortaleza — Abraão Vieira">
 <meta property="og:description" content="Psicoterapia presencial com Abraão Vieira, CRP 11/24139. Atendimento na Aldeota, em Fortaleza, para jovens a partir de 16 anos e adultos.">
 <meta property="og:url" content="https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/">
@@ -456,6 +456,133 @@
     text-align: center;
   }
 }
+
+
+/* ============================================================
+   PROTÓTIPO SAGE — LANDING PRESENCIAL COMPLETA
+   Camada isolada de experimento. Não altera o CSS compartilhado.
+   Paleta: verde profundo + creme; sage somente em microdetalhes.
+   ============================================================ */
+:root{
+  --sage-deep:#344638;
+  --sage-cream:#F7F5EF;
+  --sage-accent:#C2CEB5;
+  --paper:var(--sage-cream);
+  --ink:var(--sage-deep);
+  --dark:var(--sage-deep);
+  --cream:var(--sage-cream);
+  --taupe:var(--sage-cream);
+  --line:rgba(52,70,56,.24);
+}
+body.landing-v2{background:var(--sage-cream);color:var(--sage-deep)}
+/* Hero preserva a composição clara aprovada; apenas harmoniza a tipografia. */
+.hero-v2{background:var(--sage-cream)!important;color:var(--sage-deep)!important}
+.hero-v2 .hero-kicker,.hero-v2 h1,.hero-v2 .hero-bio h2,.hero-v2 .hero-bio p{color:var(--sage-deep)!important}
+.hero-v2 .hero-kicker::before,.hero-v2 .hero-kicker::after{background:rgba(52,70,56,.38)!important}
+.hero-v2 .hero-bio .button{background:var(--sage-accent)!important;color:var(--sage-deep)!important;border-color:var(--sage-accent)!important}
+.hero-v2 .hero-bio .button:hover{background:var(--sage-cream)!important;border-color:var(--sage-deep)!important}
+.hero-v2 .hero-bio .button svg{fill:currentColor!important}
+/* Seção terapêutica: fundo profundo e cartões creme. */
+.process-carousel{background:var(--sage-deep)!important;color:var(--sage-cream)!important;border:0!important}
+.process-carousel .process-intro h2{color:var(--sage-cream)!important}
+.process-card{background:var(--sage-cream)!important;color:var(--sage-deep)!important;border:1px solid rgba(247,245,239,.28)!important;border-radius:10px!important}
+.process-card h3,.process-card p,.process-card-number,.process-card-label{color:var(--sage-deep)!important}
+.process-card-top{border-bottom-color:rgba(52,70,56,.25)!important}
+.process-card[data-step]::before{color:rgba(52,70,56,.075)!important}
+.process-card-continuity{background:var(--sage-deep)!important;border-color:rgba(247,245,239,.55)!important}
+.process-card-continuity h3,.process-card-continuity p{color:var(--sage-cream)!important}
+.process-card-continuity::before{color:rgba(247,245,239,.07)!important}
+.process-progress{background:rgba(247,245,239,.35)!important}
+.process-progress-fill{background:var(--sage-accent)!important}
+.process-progress-marker{filter:none!important}
+.process-arrow{border-color:var(--sage-cream)!important;color:var(--sage-cream)!important;background:transparent!important}
+.process-arrow svg{stroke:currentColor!important}
+.process-arrow:hover:not(:disabled){background:var(--sage-accent)!important;border-color:var(--sage-accent)!important;color:var(--sage-deep)!important}
+.process-arrow:disabled{opacity:.42!important}
+/* Informações práticas: superfície creme, texto e divisórias verde profundo. */
+.practical-section{background:var(--sage-cream)!important;color:var(--sage-deep)!important}
+.practical-section,.practical-section *{--practical-cream:var(--sage-cream);--practical-charcoal:var(--sage-deep);--practical-line:rgba(52,70,56,.32)}
+.practical-heading h2,.practical-kicker,.practical-row dt,.practical-row dd,.practical-online-note,.practical-online-note a{color:var(--sage-deep)!important}
+.practical-rule,.practical-data::before,.practical-row::after{background:rgba(52,70,56,.36)!important}
+.practical-action .button{background:var(--sage-accent)!important;color:var(--sage-deep)!important;border-color:var(--sage-accent)!important}
+.practical-action .button svg{fill:currentColor!important}
+.practical-action .button:hover{background:var(--sage-deep)!important;color:var(--sage-cream)!important;border-color:var(--sage-deep)!important}
+/* Perfil Google: seção verde; cartão creme mantém leitura confortável. */
+.google-profile-section{background:var(--sage-deep)!important;border:0!important}
+.google-profile-card{background:var(--sage-cream)!important;color:var(--sage-deep)!important;border:1px solid rgba(247,245,239,.35)!important}
+.google-profile-copy h2,.google-profile-name,.google-profile-description,.google-profile-link{color:var(--sage-deep)!important}
+.google-profile-link{border-top-color:rgba(52,70,56,.25)!important}
+.google-profile-link svg{stroke:currentColor!important}
+.google-profile-link:focus-visible{outline-color:var(--sage-accent)!important}
+/* Encerramento: volta ao creme; perguntas em cartões verde profundo. */
+.closing-faq-section{background:var(--sage-cream)!important;color:var(--sage-deep)!important}
+.closing-cta h2,.closing-cta>p{color:var(--sage-deep)!important}
+.closing-faq-list summary,.closing-faq-list summary::after,.closing-faq-list .answer p{color:var(--sage-cream)!important}
+.closing-rule{background:rgba(52,70,56,.42)!important}
+.closing-cta-button .button{background:var(--sage-accent)!important;color:var(--sage-deep)!important;border-color:var(--sage-accent)!important}
+.closing-cta-button .button svg{fill:currentColor!important}
+.closing-cta-button .button:hover{background:var(--sage-deep)!important;border-color:var(--sage-deep)!important;color:var(--sage-cream)!important}
+.closing-faq-list .questions{border-top:0!important}
+.closing-faq-list details{background:var(--sage-deep)!important;border-color:var(--sage-deep)!important;color:var(--sage-cream)!important}
+.closing-faq-list details{padding:0 18px!important;margin:10px 0!important;border:1px solid var(--sage-deep)!important;border-radius:10px!important}
+.closing-faq-list summary{padding-left:2px!important}
+.closing-faq-list .answer{padding-left:2px!important}
+/* Rodapé claro para encerrar a página sem prolongar o bloco escuro. */
+.landing-v2 .footer{background:var(--sage-cream)!important;color:var(--sage-deep)!important;border-top:1px solid rgba(52,70,56,.18)}
+.landing-v2 .footer a,.landing-v2 .footer-name,.landing-v2 .footer-meta,.landing-v2 .footer-legal{color:var(--sage-deep)!important}
+.footer-legal{border-top-color:rgba(52,70,56,.2)!important}
+/* WhatsApp flutuante: botão sage discreto, ícone verde profundo. */
+.wa-fab{background:var(--sage-accent)!important;color:var(--sage-deep)!important;border-color:var(--sage-accent)!important}
+.wa-fab svg{fill:currentColor!important}
+/* Foco acessível, sem introduzir terceira cor dominante. */
+a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--sage-accent)!important}
+@media(max-width:650px){
+ .process-carousel{padding-top:48px!important;padding-bottom:54px!important}
+ .google-profile-section{padding-top:34px!important;padding-bottom:40px!important}
+ .closing-faq-section{padding-top:58px!important;padding-bottom:64px!important}
+}
+
+
+/* REFINO SAGE — contraste tipográfico, FAQ sem cartões e CTA escuro */
+/* A paleta textual fica restrita ao verde profundo e ao creme. */
+body.landing-v2{color:#344638!important}
+body.landing-v2 p,body.landing-v2 li,body.landing-v2 small,body.landing-v2 label,
+body.landing-v2 .hero-kicker,body.landing-v2 .hero-bio h2,body.landing-v2 .hero-bio p,
+body.landing-v2 .practical-section *,body.landing-v2 .google-profile-card *,
+body.landing-v2 .closing-cta *,body.landing-v2 .footer *{color:#344638}
+.hero-v2 h1,.hero-v2 h2,.hero-v2 p,.hero-v2 span{color:#344638!important}
+.process-carousel .process-intro h2,.process-carousel .process-intro p{color:#F7F5EF!important}
+.process-card:not(.process-card-continuity) h3,
+.process-card:not(.process-card-continuity) p,
+.process-card:not(.process-card-continuity) span{color:#344638!important}
+.process-card-continuity h3,.process-card-continuity p,.process-card-continuity span{color:#F7F5EF!important}
+/* Marcador SVG e setas em creme para leitura sobre o fundo verde. */
+.process-progress-marker{filter:grayscale(1) brightness(0) invert(96%) sepia(8%) saturate(250%)!important}
+.process-arrow,.process-arrow svg{color:#F7F5EF!important;stroke:#F7F5EF!important}
+/* Botões WhatsApp: verde profundo com texto e ícone creme. */
+body.landing-v2 a.button,
+body.landing-v2 .hero-bio .button,
+body.landing-v2 .practical-action .button,
+body.landing-v2 .closing-cta-button .button{
+  background:#344638!important;color:#F7F5EF!important;border-color:#344638!important;
+}
+body.landing-v2 a.button svg,body.landing-v2 a.button svg path{fill:#F7F5EF!important;color:#F7F5EF!important}
+body.landing-v2 a.button:hover{background:#F7F5EF!important;color:#344638!important;border-color:#344638!important}
+body.landing-v2 a.button:hover svg,body.landing-v2 a.button:hover svg path{fill:#344638!important}
+/* FAQ retorna ao tratamento original: sem caixas preenchidas, apenas texto e divisórias. */
+.closing-faq-section{background:#F7F5EF!important;color:#344638!important}
+.closing-faq-list .questions{border-top:1px solid rgba(52,70,56,.28)!important}
+.closing-faq-list details,
+.closing-faq-list details[open]{background:transparent!important;color:#344638!important;border:0!important;border-bottom:1px solid rgba(52,70,56,.28)!important;border-radius:0!important;margin:0!important;padding:0!important}
+.closing-faq-list summary,
+.closing-faq-list summary::after,
+.closing-faq-list .answer,
+.closing-faq-list .answer p{color:#344638!important}
+.closing-faq-list summary{padding:18px 0!important}
+.closing-faq-list .answer{padding:0 0 18px!important}
+.closing-rule{background:rgba(52,70,56,.35)!important}
+/* Pequenos detalhes sage apenas nos estados de foco/indicadores. */
+a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5!important}
 
 </style>
 <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
