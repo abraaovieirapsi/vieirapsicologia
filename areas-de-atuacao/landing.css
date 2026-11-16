@@ -619,3 +619,23 @@ details[data-expanded="true"] summary:after{content:'−'}
     padding-top: 24px;
   }
 }
+
+
+/* Ajuste pontual — CTA final após o FAQ, sem linhas decorativas. */
+.landing-v2 .closing-cta{padding-bottom:30px}
+.landing-v2 .closing-cta-button{
+  display:flex;
+  width:auto;
+  max-width:100%;
+  margin:28px auto 0;
+  padding:0;
+  gap:0;
+  justify-content:center;
+}
+.landing-v2 .closing-cta-button .button{max-width:100%}
+.landing-v2 .closing-faq-section{padding-bottom:52px}
+@media(max-width:650px){
+  .landing-v2 .closing-cta{padding-bottom:28px}
+  .landing-v2 .closing-cta-button{width:auto;margin:26px auto 0}
+  .landing-v2 .closing-faq-section{padding-bottom:42px}
+}

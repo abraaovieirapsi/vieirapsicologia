@@ -727,6 +727,129 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
     display: block;
   }
 }
+
+/* AJUSTE FINAL — equilíbrio do FAQ, linha integral no CTA e rodapé sem divisória. */
+@media (min-width: 0px) {
+  /* O bloco de perguntas ganha respiro inferior para ficar visualmente
+     equidistante dos CTAs que o delimitam. */
+  .landing-v2 .closing-cta-button {
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 90px calc(50% - 50vw) 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0 !important;
+  }
+  /* Repete a linha contínua do CTA superior, atravessando a página. */
+  .landing-v2 .closing-cta-button::before,
+  .landing-v2 .closing-cta-button::after {
+    content: "";
+    display: block;
+    height: 1px;
+    flex: 1 1 auto;
+    min-width: 8px;
+    background: rgba(52,70,56,.38);
+  }
+  .landing-v2 .closing-cta-button .button {
+    flex: 0 0 auto;
+    max-width: calc(100% - 36px) !important;
+  }
+  /* Retira tanto o traço superior do rodapé quanto qualquer traço
+     residual acima da linha de direitos reservados. */
+  .landing-v2 .footer {
+    border-top: 0 !important;
+  }
+  .landing-v2 .footer-legal {
+    border-top: 0 !important;
+  }
+}
+
+
+
+/* Ritmo vertical padronizado — psicoterapia online.
+   Equilibra as transições entre Informações Práticas, FAQ, CTAs e rodapé. */
+@media (min-width:651px){
+  body.landing-v2 .practical-section{
+    padding-top:64px!important;
+    padding-bottom:52px!important;
+  }
+  body.landing-v2 .practical-heading{
+    margin-bottom:40px!important;
+  }
+  body.landing-v2 .closing-faq-section{
+    padding-top:56px!important;
+    padding-bottom:44px!important;
+  }
+  body.landing-v2 .closing-cta{
+    padding-bottom:30px!important;
+  }
+  body.landing-v2 .closing-cta-button{
+    margin-top:48px!important;
+  }
+  body.landing-v2 .footer{
+    padding-top:28px!important;
+    padding-bottom:22px!important;
+  }
+}
+@media (max-width:650px){
+  body.landing-v2 .practical-section{
+    padding-top:56px!important;
+    padding-bottom:44px!important;
+  }
+  body.landing-v2 .practical-heading{
+    margin-bottom:34px!important;
+  }
+  body.landing-v2 .practical-action{
+    margin-top:36px!important;
+  }
+  /* FAQ: reduz a margem superior para aproximar o título do CTA anterior. */
+  body.landing-v2 .closing-faq-section{
+    padding-top:30px!important;
+    padding-bottom:18px!important;
+  }
+  /* Menos espaço após o CTA final; o footer sobe sem ficar colado ao botão. */
+  body.landing-v2 .closing-cta{
+    padding-bottom:14px!important;
+  }
+  body.landing-v2 .closing-cta-button{
+    margin-top:36px!important;
+  }
+  body.landing-v2 .footer{
+    padding-top:20px!important;
+    padding-bottom:20px!important;
+  }
+}
+
+/* Centralização óptica dos CTAs nos intervalos entre as seções — mobile. */
+@media (max-width:650px){
+  /* Primeiro botão: desloca-o para o meio do espaço entre o texto prático e o FAQ,
+     compensando a mesma distância no padding inferior da seção anterior. */
+  body.landing-v2 .practical-action{
+    margin-top:63px!important;
+  }
+  body.landing-v2 .practical-section{
+    padding-bottom:17px!important;
+  }
+  /* Segundo botão: centralizado entre o fim da lista de perguntas e o início do footer.
+     A soma dos espaçamentos é mantida para não deslocar o footer. */
+  body.landing-v2 .closing-cta-button{
+    margin-top:28px!important;
+  }
+  body.landing-v2 .closing-faq-section{
+    padding-bottom:26px!important;
+  }
+}
+
+
+/* Ajuste fino: equilibra o espaço entre a última pergunta e o segundo CTA. */
+@media (max-width:650px){
+  body.landing-v2 .closing-cta-button{
+    margin-top:49px!important;
+  }
+}
+
 </style>
 <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
 <meta property="og:image" content="https://vieirapsicologia.com.br/assets/og-image.jpg">
@@ -983,11 +1106,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
     <div class="closing-cta">
       <h2 id="closing-cta-title">Ficou com alguma dúvida?</h2>
       <p>Estou à disposição para esclarecer suas dúvidas sobre a psicoterapia online e consultar os horários disponíveis.</p>
-      <div class="closing-cta-button">
-        <span class="closing-rule" aria-hidden="true"></span>
-        <a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20online." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários pelo WhatsApp</a>
-        <span class="closing-rule" aria-hidden="true"></span>
-      </div>
     </div>
     <div class="closing-faq-list">
       <div id="duvidas-frequentes" class="questions">
@@ -1028,6 +1146,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
 </div>
 </details>
 </div></div>
+    <div class="closing-cta-button">
+        <a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20online." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários pelo WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
