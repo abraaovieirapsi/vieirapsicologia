@@ -1,26 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="index, follow">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="index, follow" name="robots"/>
 <title>Psicoterapia presencial em Fortaleza — Abraão Vieira</title>
-<meta name="description" content="Psicoterapia presencial com Abraão Vieira, CRP 11/24139. Atendimento na Aldeota, em Fortaleza, para jovens a partir de 16 anos e adultos.">
-<link rel="canonical" href="https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/">
-<meta name="theme-color" content="#F7F5EF">
-<meta property="og:title" content="Psicoterapia presencial em Fortaleza — Abraão Vieira">
-<meta property="og:description" content="Psicoterapia presencial com Abraão Vieira, CRP 11/24139. Atendimento na Aldeota, em Fortaleza, para jovens a partir de 16 anos e adultos.">
-<meta property="og:url" content="https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Cormorant+SC:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fontlibrary.org//face/glacial-indifference" type="text/css">
-<link rel="icon" type="image/png" href="../../assets/favicon.png">
-<link rel="stylesheet" href="../landing.css">
-<link rel="preload" as="image" href="../../assets/areas-de-atuacao/sobre-mobile.webp" media="(max-width:650px)" fetchpriority="high">
-<link rel="preload" as="image" href="../../assets/areas-de-atuacao/sobre-desktop.webp" media="(min-width:651px)" fetchpriority="high">
+<meta content="Psicoterapia presencial com Abraão Vieira, CRP 11/24139. Atendimento na Aldeota, em Fortaleza, para jovens a partir de 16 anos e adultos." name="description"/>
+<link href="https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/" rel="canonical"/>
+<meta content="#F7F5EF" name="theme-color"/>
+<meta content="Psicoterapia presencial em Fortaleza — Abraão Vieira" property="og:title"/>
+<meta content="Psicoterapia presencial com Abraão Vieira, CRP 11/24139. Atendimento na Aldeota, em Fortaleza, para jovens a partir de 16 anos e adultos." property="og:description"/>
+<meta content="https://vieirapsicologia.com.br/areas-de-atuacao/psicoterapia-individual/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="pt_BR" property="og:locale"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Cormorant+SC:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fontlibrary.org//face/glacial-indifference" rel="stylesheet" type="text/css"/>
+<link href="../../assets/favicon.png" rel="icon" type="image/png"/>
+<link href="../landing.css" rel="stylesheet"/>
+<link as="image" fetchpriority="high" href="../../assets/areas-de-atuacao/sobre-mobile.webp" media="(max-width:650px)" rel="preload"/>
+<link as="image" fetchpriority="high" href="../../assets/areas-de-atuacao/sobre-desktop.webp" media="(min-width:651px)" rel="preload"/>
 <style>
 /* HERO DESTA LANDING — fotos compartilhadas em /assets/areas-de-atuacao/. Para usar outra foto só nesta landing, troque os nomes abaixo.
    Sem o arquivo, a hero mostra o fundo taupe liso. */
@@ -584,15 +585,165 @@ body.landing-v2 a.button:hover svg,body.landing-v2 a.button:hover svg path{fill:
 /* Pequenos detalhes sage apenas nos estados de foco/indicadores. */
 a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5!important}
 
-</style>
-<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
-<meta property="og:image" content="https://vieirapsicologia.com.br/assets/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Abraão Vieira, psicólogo clínico em Fortaleza">
-<meta name="twitter:card" content="summary_large_image">
-<!-- Dados estruturados omitidos nesta cópia de trabalho não indexável. -->
 
+
+/* Espaçamento na informação de investimento — presencial. */
+.practical-row dd span {
+  display: inline-block;
+  margin-left: .35em;
+}
+
+/* Alinhamento do hero presencial igual ao da página online. */
+/* Ajuste de alinhamento do hero online conforme a referência visual aprovada.
+   Mantém cores, tipografia, dimensões e componentes existentes. */
+@media (max-width:650px){
+  .landing-v2 .hero-v2 .hero-bio{ text-align:center; }
+  .landing-v2 .hero-v2 .hero-bio h2{
+    width:100%;
+    max-width:520px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+  }
+  .landing-v2 .hero-v2 .hero-cta-row{ justify-content:center; }
+  .landing-v2 .hero-v2 .hero-bio > p{
+    max-width:520px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:14px;
+    text-align:center;
+  }
+}
+
+
+
+/* Ajuste exclusivo do hero desktop: slogan, CTA e informações no mesmo eixo visual.
+   O layout mobile permanece inalterado. */
+@media (min-width: 1025px) {
+  .landing-v2 .hero-v2 .hero-bio {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .landing-v2 .hero-v2 .hero-bio h2 {
+    width: 100%;
+    max-width: 650px;
+    margin-inline: auto;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .landing-v2 .hero-v2 .hero-cta-row {
+    width: 100%;
+    justify-content: center;
+    margin-top: 28px;
+  }
+  .landing-v2 .hero-v2 .hero-bio > p {
+    width: 100%;
+    max-width: 600px;
+    margin: 12px auto 0;
+    text-align: center;
+  }
+}
+
+
+/* COMPOSIÇÃO DESKTOP — alinhamento editorial conforme referência Canva.
+   Restrita à página online e a telas desktop; o mobile permanece inalterado. */
+@media (min-width: 1025px) {
+  .landing-v2 .hero-v2 .hero-heading,
+  .landing-v2 .hero-v2 .hero-heading-copy {
+    text-align: left !important;
+  }
+
+  /* Identificação: texto à esquerda e linha somente à direita. */
+  .landing-v2 .hero-v2 .hero-kicker {
+    justify-content: flex-start;
+    width: calc(100% + 32px);
+    max-width: none;
+    margin: 0 0 8px;
+    text-align: left;
+  }
+  .landing-v2 .hero-v2 .hero-kicker::before {
+    display: none !important;
+  }
+  .landing-v2 .hero-v2 .hero-kicker::after {
+    display: block !important;
+    flex: 1 1 auto;
+    min-width: 24px;
+  }
+
+  /* Nome alinhado à esquerda, com divisor inferior até a borda direita. */
+  .landing-v2 .hero-v2 .hero-heading-copy h1,
+  .landing-v2 .hero-v2 h1 {
+    width: calc(100% + 32px) !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 0 12px;
+    border-bottom: 1px solid rgba(52,70,56,.38);
+    text-align: left !important;
+  }
+
+  /* Slogan, botão e informações compartilham o mesmo eixo esquerdo. */
+  .landing-v2 .hero-v2 .hero-bio {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  .landing-v2 .hero-v2 .hero-bio h2 {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 18px;
+    text-align: left !important;
+    text-wrap: initial;
+  }
+  .landing-v2 .hero-v2 .hero-cta-row {
+    width: calc(100% + 32px) !important;
+    justify-content: flex-start !important;
+    margin: 0 0 12px !important;
+  }
+  .landing-v2 .hero-v2 .hero-cta-row::before {
+    display: none !important;
+  }
+  .landing-v2 .hero-v2 .hero-cta-row::after {
+    display: block !important;
+    flex: 1 1 auto;
+    min-width: 24px;
+  }
+  .landing-v2 .hero-v2 .hero-bio > p {
+    width: 100%;
+    max-width: none;
+    margin: 0 !important;
+    text-align: left !important;
+    white-space: nowrap;
+  }
+  .landing-v2 .hero-v2 .hero-bio > p br {
+    display: none;
+  }
+}
+
+
+
+/* Ajuste final solicitado — somente desktop: slogan em uma linha e informações em duas. */
+@media (min-width: 1025px) {
+  .landing-v2 .hero-v2 .hero-bio h2 {
+    white-space: nowrap;
+    font-size: clamp(22px, 2.1vw, 30px);
+    text-wrap: nowrap;
+  }
+  .landing-v2 .hero-v2 .hero-bio > p {
+    white-space: normal;
+    line-height: 1.5;
+  }
+  .landing-v2 .hero-v2 .hero-bio > p br {
+    display: block;
+  }
+}
+</style>
+<link href="../../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="https://vieirapsicologia.com.br/assets/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Abraão Vieira, psicólogo clínico em Fortaleza" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<!-- Dados estruturados omitidos nesta cópia de trabalho não indexável. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -613,7 +764,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
       },
       "image": "https://vieirapsicologia.com.br/assets/og-image.jpg",
       "description": "Psicoterapia presencial com Abraão Vieira, psicólogo clínico (CRP 11/24139), na Aldeota, em Fortaleza.",
-      "priceRange": "R$100–R$145",
+      "priceRange": "R$90",
       "areaServed": {
         "@type": "City",
         "name": "Fortaleza"
@@ -690,7 +841,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
         {
           "@type": "Offer",
           "name": "Sessão presencial",
-          "price": "145",
+          "price": "90",
           "priceCurrency": "BRL"
         }
       ]
@@ -719,161 +870,132 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
 <body class="landing-v2">
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 <main id="conteudo">
-<section class="hero-v2 hero-motion" aria-labelledby="titulo">
+<section aria-labelledby="titulo" class="hero-v2 hero-motion">
 <div class="wrap">
-  <div class="hero-heading">
-    <div class="hero-heading-copy">
-      <p class="hero-kicker">psicólogo clínico</p>
-      <h1 id="titulo">Abraão Vieira</h1>
-    </div>
-  </div>
-  <div class="hero-portrait">
-    <picture>
-      <source media="(max-width:650px)" srcset="../../assets/areas-de-atuacao/sobre-mobile.webp">
-      <source media="(max-width:1024px)" srcset="../../assets/areas-de-atuacao/sobre-tablet.webp">
-      <img src="../../assets/areas-de-atuacao/sobre-desktop.webp" alt="Abraão Vieira, psicólogo clínico" width="1024" height="768" fetchpriority="high" decoding="async">
-    </picture>
-  </div>
-  <div class="hero-bio">
-    <h2>Minha atuação</h2>
-    <p>Sou psicólogo e trabalho com a Terapia Cognitivo-Comportamental (TCC), buscando compreender as dificuldades de cada pessoa e construir, em colaboração, estratégias que possam ser aplicadas às situações concretas do cotidiano.</p>
-    <div class="hero-cta-row">
-      <a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários pelo WhatsApp</a>
-    </div>
-  </div>
+<div class="hero-heading">
+<div class="hero-heading-copy">
+<p class="hero-kicker">psicoterapia presencial</p>
+<h1 id="titulo">Abraão Vieira</h1>
+</div>
+</div>
+<div class="hero-portrait">
+<picture>
+<source media="(max-width:650px)" srcset="../../assets/areas-de-atuacao/sobre-mobile.webp"/>
+<source media="(max-width:1024px)" srcset="../../assets/areas-de-atuacao/sobre-tablet.webp"/>
+<img alt="Abraão Vieira, psicoterapia presencial" decoding="async" fetchpriority="high" height="768" src="../../assets/areas-de-atuacao/sobre-desktop.webp" width="1024"/>
+</picture>
+</div>
+<div class="hero-bio">
+<h2>Toda mudança começa com um pequeno passo.</h2>
+<div class="hero-cta-row">
+<a class="button" data-ads-conversion="whatsapp" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"></path></svg>Consultar horários pelo WhatsApp</a>
+</div>
+<p>Sessões de 50 minutos · R$90 por sessão<br/>Atendimento particular, sem convênios</p>
+</div>
 </div>
 </section>
-<section class="section process process-carousel" aria-labelledby="process-title">
+<section aria-labelledby="process-title" class="section process process-carousel">
 <div class="wrap process-carousel-wrap">
-  <div class="process-intro">
-    <h2 id="process-title">Como funciona a terapia?</h2>
-  </div>
-  <div class="process-carousel-ui" data-process-carousel>
-    <div class="process-carousel-viewport" tabindex="0" aria-label="Etapas do processo terapêutico. Deslize para navegar entre os cartões.">
-      <div class="process-carousel-track">
-        <article class="process-card" data-step="01" aria-label="Etapa 1 de 5">
-          <div class="process-card-top"><span class="process-card-number">01</span><span class="process-card-label">Compreender</span></div>
-          <h3>O que está acontecendo?</h3>
-          <p>Conhecer sua história, entender o que levou você a procurar acompanhamento e observar como essas dificuldades afetam sua vida.</p>
-        </article>
-        <article class="process-card" data-step="02" aria-label="Etapa 2 de 5">
-          <div class="process-card-top"><span class="process-card-number">02</span><span class="process-card-label">Observar</span></div>
-          <h3>Como isso aparece no seu dia a dia?</h3>
-          <p>Perceber como pensamentos, emoções e maneiras de agir se relacionam nas situações que você enfrenta.</p>
-        </article>
-        <article class="process-card" data-step="03" aria-label="Etapa 3 de 5">
-          <div class="process-card-top"><span class="process-card-number">03</span><span class="process-card-label">Experimentar</span></div>
-          <h3>O que pode ser feito de outra maneira?</h3>
-          <p>Explorar alternativas para lidar com essas situações e observar o que ajuda e o que pode ser ajustado individualmente.</p>
-        </article>
-        <article class="process-card" data-step="04" aria-label="Etapa 4 de 5">
-          <div class="process-card-top"><span class="process-card-number">04</span><span class="process-card-label">Construir</span></div>
-          <h3>Que mudanças fazem sentido para você?</h3>
-          <p>Desenvolver estratégias práticas para lidar com as dificuldades no seu cotidiano de forma personalizada.</p>
-        </article>
-        <article class="process-card process-card-continuity" aria-label="Etapa 5 de 5">
-          
-          <h3>O movimento não precisa ser linear.</h3>
-          <p>Essas etapas se entrelaçam e podem ser retomadas ao longo da terapia, conforme suas necessidades e o andamento do acompanhamento.</p>
-        </article>
-      </div>
-    </div>
-    <div class="process-carousel-controls">
-      <div class="process-progress" role="progressbar" aria-label="Progresso das etapas" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" style="--progress:0%">
-        <span class="process-progress-fill" aria-hidden="true"></span><img class="process-progress-marker" src="../../assets/logo-process-marker.svg" alt="" aria-hidden="true">
-      </div>
-      <div class="process-arrows">
-        <button class="process-arrow process-prev" type="button" aria-label="Etapa anterior" disabled>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"/></svg>
-        </button>
-        <button class="process-arrow process-next" type="button" aria-label="Próxima etapa">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-        </button>
-      </div>
-    </div>
-    <p class="process-live sr-only" aria-live="polite" aria-atomic="true">Etapa 1 de 5: Compreender</p>
-  </div>
+<div class="process-intro">
+<h2 id="process-title">Como funciona a terapia?</h2>
+</div>
+<div class="process-carousel-ui" data-process-carousel="">
+<div aria-label="Etapas do processo terapêutico. Deslize para navegar entre os cartões." class="process-carousel-viewport" tabindex="0">
+<div class="process-carousel-track">
+<article aria-label="Etapa 1 de 5" class="process-card" data-step="01">
+<div class="process-card-top"><span class="process-card-number">01</span><span class="process-card-label">Compreender</span></div>
+<h3>O que está acontecendo?</h3>
+<p>Conhecer sua história, entender o que levou você a procurar acompanhamento e observar como essas dificuldades afetam sua vida.</p>
+</article>
+<article aria-label="Etapa 2 de 5" class="process-card" data-step="02">
+<div class="process-card-top"><span class="process-card-number">02</span><span class="process-card-label">Observar</span></div>
+<h3>Como isso aparece no seu dia a dia?</h3>
+<p>Perceber como pensamentos, emoções e maneiras de agir se relacionam nas situações que você enfrenta.</p>
+</article>
+<article aria-label="Etapa 3 de 5" class="process-card" data-step="03">
+<div class="process-card-top"><span class="process-card-number">03</span><span class="process-card-label">Experimentar</span></div>
+<h3>O que pode ser feito de outra maneira?</h3>
+<p>Explorar alternativas para lidar com essas situações e observar o que ajuda e o que pode ser ajustado individualmente.</p>
+</article>
+<article aria-label="Etapa 4 de 5" class="process-card" data-step="04">
+<div class="process-card-top"><span class="process-card-number">04</span><span class="process-card-label">Construir</span></div>
+<h3>Que mudanças fazem sentido para você?</h3>
+<p>Desenvolver estratégias práticas para lidar com as dificuldades no seu cotidiano de forma personalizada.</p>
+</article>
+<article aria-label="Etapa 5 de 5" class="process-card process-card-continuity">
+<h3>O movimento não precisa ser linear.</h3>
+<p>Essas etapas se entrelaçam e podem ser retomadas ao longo da terapia, conforme suas necessidades e o andamento do acompanhamento.</p>
+</article>
+</div>
+</div>
+<div class="process-carousel-controls">
+<div aria-label="Progresso das etapas" aria-valuemax="5" aria-valuemin="1" aria-valuenow="1" class="process-progress" role="progressbar" style="--progress:0%">
+<span aria-hidden="true" class="process-progress-fill"></span><img alt="" aria-hidden="true" class="process-progress-marker" src="../../assets/logo-process-marker.svg"/>
+</div>
+<div class="process-arrows">
+<button aria-label="Etapa anterior" class="process-arrow process-prev" disabled="" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 18 9 12l6-6"></path></svg>
+</button>
+<button aria-label="Próxima etapa" class="process-arrow process-next" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg>
+</button>
+</div>
+</div>
+<p aria-atomic="true" aria-live="polite" class="process-live sr-only">Etapa 1 de 5: Compreender</p>
+</div>
 </div>
 </section>
-
-
-<section class="section practical-section" aria-labelledby="practical-title">
-  <div class="wrap practical-inner">
-    <div class="practical-heading">
-      <div class="practical-kicker" aria-label="Psicoterapia presencial">
-        <span class="practical-rule" aria-hidden="true"></span>
-        <span>psicoterapia presencial</span>
-        <span class="practical-rule" aria-hidden="true"></span>
-      </div>
-      <h2 id="practical-title">Informações Práticas</h2>
-    </div>
-
-    <dl class="practical-data">
-      <div class="practical-row">
-        <dt>Duração</dt>
-        <dd>50 minutos</dd>
-      </div>
-      <div class="practical-row">
-        <dt>Investimento</dt>
-        <dd>R$ 145 <span>por sessão</span></dd>
-      </div>
-      <div class="practical-row">
-        <dt>Pagamento</dt>
-        <dd>Pix</dd>
-      </div>
-      <div class="practical-row practical-row-address">
-        <dt>Endereço</dt>
-        <dd>Avenida Dom Luís, 300, sala 810, 8º andar, Shopping Avenida, Aldeota, Fortaleza-CE</dd>
-      </div>
-    </dl>
-
-    <p class="practical-online-note">Você busca atendimento online? Consulte a <a href="../psicoterapia-online/">página de psicoterapia online</a>.</p>
-
-    <div class="practical-action">
-      <a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários pelo WhatsApp</a>
-    </div>
-  </div>
-</section><section class="section google-profile-section" aria-labelledby="google-profile-title">
-  <div class="wrap">
-    <div class="google-profile-card">
-      <div class="google-profile-main">
-        <div class="google-profile-copy">
-          <h2 id="google-profile-title">Conheça meu trabalho no Google</h2>
-          <p class="google-profile-name">Abraão Vieira — Psicólogo</p>
-          <p class="google-profile-description">Conheça meu perfil profissional e as avaliações publicadas no Google.</p>
-        </div>
-        <img class="google-profile-photo" src="../../assets/areas-de-atuacao/google-consultorio.webp" alt="Ambiente do consultório onde acontecem os atendimentos presenciais" loading="lazy" decoding="async" width="450" height="600">
-      </div>
-      <a class="google-profile-link" href="https://maps.app.goo.gl/rQfD8PoUoJBadVdu8" target="_blank" rel="noopener noreferrer">
-        <span>Ver perfil e avaliações</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
-      </a>
-    </div>
-  </div>
+<section aria-labelledby="practical-title" class="section practical-section" id="informacoes-praticas">
+<div class="wrap practical-inner">
+<div class="practical-heading">
+<div aria-label="Psicoterapia presencial" class="practical-kicker">
+<span aria-hidden="true" class="practical-rule"></span>
+<span>psicoterapia presencial</span>
+<span aria-hidden="true" class="practical-rule"></span>
+</div>
+<h2 id="practical-title">Informações Práticas</h2>
+</div>
+<dl class="practical-data"><div class="practical-row"><dt>Duração</dt><dd>50 minutos</dd></div><div class="practical-row"><dt>Investimento</dt><dd>R$ 90<span>por sessão</span></dd></div><div class="practical-row"><dt>Pagamento</dt><dd>Pix</dd></div><div class="practical-row practical-row-address"><dt>Endereço</dt><dd>Avenida Dom Luís, 300, sala 810, 8º andar, Shopping Avenida, Aldeota, Fortaleza-CE</dd></div></dl>
+<p class="practical-online-note">Você busca atendimento online? Consulte a <a href="../psicoterapia-online/">página de psicoterapia online</a>.</p>
+<div class="practical-action" id="contato">
+<a class="button" data-ads-conversion="whatsapp" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"></path></svg>Consultar horários pelo WhatsApp</a>
+</div>
+</div>
+</section><section aria-labelledby="google-profile-title" class="section google-profile-section">
+<div class="wrap">
+<div class="google-profile-card">
+<div class="google-profile-main">
+<div class="google-profile-copy">
+<h2 id="google-profile-title">Conheça meu trabalho no Google</h2>
+<p class="google-profile-name">Abraão Vieira — Psicólogo</p>
+<p class="google-profile-description">Conheça meu perfil profissional e as avaliações publicadas no Google.</p>
+</div>
+<img alt="Ambiente do consultório onde acontecem os atendimentos presenciais" class="google-profile-photo" decoding="async" height="600" loading="lazy" src="../../assets/areas-de-atuacao/google-consultorio.webp" width="450"/>
+</div>
+<a class="google-profile-link" href="https://maps.app.goo.gl/rQfD8PoUoJBadVdu8" rel="noopener noreferrer" target="_blank">
+<span>Ver perfil e avaliações</span>
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+</a>
+</div>
+</div>
 </section>
-<section class="section closing-faq-section" aria-labelledby="closing-cta-title">
-  <div class="wrap closing-faq-inner">
-    <div class="closing-cta">
-      <h2 id="closing-cta-title">Ficou com alguma dúvida?</h2>
-      <p>Estou à disposição para esclarecer suas dúvidas sobre a psicoterapia e consultar os horários disponíveis.</p>
-      <div class="closing-cta-button">
-        <span class="closing-rule" aria-hidden="true"></span>
-        <a class="button" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg>Consultar horários pelo WhatsApp</a>
-        <span class="closing-rule" aria-hidden="true"></span>
-      </div>
-    </div>
-    <div class="closing-faq-list">
-      <div class="questions">
-        <details>
+<section aria-labelledby="closing-cta-title" class="section closing-faq-section">
+<div class="wrap closing-faq-inner">
+<div class="closing-cta">
+<h2 id="closing-cta-title">Ficou com alguma dúvida?</h2>
+<p>Estou à disposição para esclarecer suas dúvidas sobre a psicoterapia presencial e consultar os horários disponíveis.</p>
+</div>
+<div class="closing-faq-list">
+<div class="questions" id="duvidas-frequentes"><details>
 <summary>Como é a primeira sessão?</summary>
 <div class="answer">
 <p>Conversamos sobre o que levou você a procurar psicoterapia, como isso tem afetado sua vida e o que espera do acompanhamento. A partir dessa conversa, começamos a definir juntos os objetivos da terapia, que podem ser aprofundados ou revistos ao longo das sessões.</p>
 </div>
 </details><details>
-  <summary>O que conversamos nas sessões é sigiloso?</summary>
-  <div class="answer">
-    <p>Sim. O sigilo profissional é um princípio fundamental da psicoterapia. As informações compartilhadas durante o acompanhamento são protegidas pelo sigilo, respeitadas as condições e exceções previstas no Código de Ética Profissional.</p>
-  </div>
+<summary>O que conversamos nas sessões é sigiloso?</summary>
+<div class="answer">
+<p>Sim. O sigilo profissional é um princípio fundamental da psicoterapia. As informações compartilhadas durante o acompanhamento são protegidas pelo sigilo, respeitadas as condições e exceções previstas no Código de Ética Profissional.</p>
+</div>
 </details><details>
 <summary>Preciso ter um diagnóstico para começar?</summary>
 <div class="answer">
@@ -897,14 +1019,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
 </details><details>
 <summary>O atendimento aceita convênio ou plano de saúde?</summary>
 <div class="answer">
-<p>Não. Os atendimentos são particulares, com valor de R$ 145 por sessão presencial. Se tiver dúvidas sobre o funcionamento do atendimento, você pode entrar em contato pelo WhatsApp.</p>
+<p>Não. Os atendimentos são particulares, com valor de R$ 90 por sessão presencial. Se tiver dúvidas sobre o funcionamento do atendimento, você pode entrar em contato pelo WhatsApp.</p>
 </div>
-</details>
-      </div>
-    </div>
-  </div>
-</section>
+</details></div></div>
+<div class="closing-cta-button">
+<a class="button" data-ads-conversion="whatsapp" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"></path></svg>Consultar horários pelo WhatsApp</a>
+</div>
+</div>
 
+</section>
 </main>
 <footer class="footer">
 <div class="wrap">
@@ -918,11 +1041,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
 <a href="../../privacidade/">Política de Privacidade</a>
 </div>
 </div>
-<p class="footer-legal">© <span data-ano>2026</span> Abraão Vieira. Todos os direitos reservados.</p>
+<p class="footer-legal">© <span data-ano="">2026</span> Abraão Vieira. Todos os direitos reservados.</p>
 </div>
 </footer>
-<a class="wa-fab" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp" data-ads-conversion="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"/></svg></a>
-
+<a aria-label="Conversar pelo WhatsApp" class="wa-fab" data-ads-conversion="whatsapp" href="https://wa.me/5585986577333?text=Ol%C3%A1%2C%20Abra%C3%A3o%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20psicoterapia%20presencial." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.3.1.2.1.8-.1 1z"></path></svg></a>
 <script>
 (()=> {
   const root=document.querySelector('[data-process-carousel]');
@@ -966,10 +1088,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
   addEventListener('resize',update,{passive:true});
 })();
 </script>
-
-<script src="../landing.js" defer>
+<script defer="" src="../landing.js">
 </script>
-  <script src="/assets/google-ads.js" defer></script>
+<script defer="" src="/assets/google-ads.js"></script>
 <script>
 (function(){
   var section=document.querySelector('.practical-section');
@@ -988,7 +1109,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#C2CEB5
   observer.observe(section);
 })();
 </script>
-
 <script>
 (function(){
   var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
