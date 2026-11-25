@@ -1,0 +1,12 @@
+/* Hero dos artigos do tema "tcc-e-cognicao": cor e imagens (a foto é opcional; sem o arquivo aparece só a cor). Carregar depois de ../article.css. */
+.article-page {
+  --hero-tone: #4d5551;
+}
+.article-hero::before {
+  background-image: url("../../assets/clusters/tcc-e-cognicao-hero-mobile.webp");
+}
+@media (min-width: 900px) {
+  .article-hero::before {
+    background-image: url("../../assets/clusters/tcc-e-cognicao-hero-desktop.webp");
+  }
+}

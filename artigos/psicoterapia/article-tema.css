@@ -1,0 +1,12 @@
+/* Hero dos artigos do tema "psicoterapia": cor e imagens (a foto é opcional; sem o arquivo aparece só a cor). Carregar depois de ../article.css. */
+.article-page {
+  --hero-tone: #5d5f58;
+}
+.article-hero::before {
+  background-image: url("../../assets/clusters/psicoterapia-hero-mobile.webp");
+}
+@media (min-width: 900px) {
+  .article-hero::before {
+    background-image: url("../../assets/clusters/psicoterapia-hero-desktop.webp");
+  }
+}
